@@ -1,0 +1,498 @@
+---
+title: "Rethinking Recycling? The Effects of China's Waste Import Ban on Pollution Relocation in the U.S."
+subtitle: "University of Oregon"
+author: "Shan Zhang"
+date: "2022/2/18"
+output: 
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      titleSlideClass: ["left", "bottom", "my-title"]
+      css: [default, metropolis, metropolis-fonts]
+      highlightStyle: github
+      countIncrementalSlides: false
+resource_files:
+  - graphs
+---
+
+## Recycling: Movitation 1
+
+.pull-left[
+![](graphs/2015.png)
+]
+
+.pull-right[
+![](graphs/2021.png)
+]
+
+.center[**Lane County (OR) Recycling Posters 2015 vs. 2021**]
+
+---
+
+## Recycling: Movitation 2
+.center[![description of the image](graphs/News_articles.png)]
+.center[**News and Articles about Recycling in the U.S.**]
+
+---
+
+
+## Recycling: Movitation 3
+
+.pull-left[
+- [So, Should We Recycle?](https://www.npr.org/2019/07/12/741283641/episode-926-so-should-we-recycle) 
+July 12, 2019
+
+- [Waste Land](https://www.npr.org/2020/09/11/912150085/waste-land) September 11, 2020
+**Won duPont-Columbia Award**
+
+- [Is Recycling Worth It Anymore? People On The Front Lines Say Maybe Not.](https://www.npr.org/2021/04/21/987111675/video-is-recycling-worth-it-anymore-people-on-the-front-lines-say-maybe-not) April 21, 2021
+<br/>
+ **"The Litter Myth"**
+]
+
+
+.pull-right[
+![an image](graphs/planet_money.png)
+]
+---
+
+
+## Introduction
+
+- Recycling has played a pivotal role in preventing the degradation of natural resources in the last few decades.
+
+--
+
+- Recycling rate <span style="color:darkgreen"> **7% &rarr; 32%**</span> from 1960s to currently.
+
+--
+
+- For many years, most U.S. recyclables were exported to developing countries.
+
+--
+
+- China joined the WTO in 2001.
+
+--
+
+- In 2017, China implemented its <span style="color:darkgreen"> **Green Sword (GS) Policy**</span> which banned almost all recyclable waste imports.
+
+---
+
+
+##GS Policy and Trade
+
+.pull-left[
+- Trade of the U.S. plastic wastes export dropped by <span style="color:darkgreen"> **75%**</span>.
+
+- Recyclers operating in Southern and Southeast Asia were quickly overwhelmed by the sheer volume of these recyclable wastes.
+
+- Considerable domestic environmental costs 
+ - <span style="color:darkgreen"> **Air pollution**</span>  from re-processing of these materials 
+ - <span style="color:darkgreen"> **Landfill methane (GHG) emissions**</span>  
+ - <span style="color:darkgreen"> **Land and water pollution**</span> 
+ - <span style="color:darkgreen"> **Ocean disposal**</span>
+]
+
+.pull-left[
+<img src="graphs/Trade_World.png" width="400" height = "300">
+]
+
+
+
+---
+
+
+##Recycling Centers
+
+
+
+- Low efficiency
+
+--
+
+- Lack of granular data
+
+--
+
+- Zhang (2020) uses spatial analysis and finds that 
+
+ - Before the GS policy, the PM2.5 within a **1-mile buffer** of the recycling centers is on average <span style="color:darkgreen"> **0.58 higher**</span> than the PM2.5 in a **3-9 miles buffer**.
+ 
+--
+
+ - After the GS policy was implemented, the PM2.5 **within a 1-mile buffer** of the recycling centers <span style="color:darkgreen">**increased 0.1**</span> on average.
+
+--
+
+- Recyclables went to landfills.
+
+
+---
+
+
+
+
+
+## Research Questions
+
+- What is the effect of China's GS policy on <span style="color:darkgreen"> **state-level methane emissions**</span> from landfill facilities? 
+
+--
+
+
+- What are the key features of states that drive <span style="color:darkgreen">**heterogeneous changes**</span> in methane emissions?
+
+--
+
+
+- What are the <span style="color:darkgreen">**distributional effects**</span> of the GS policy on pollution relocation for local communities (at both county and census block levels) in the state of California? 
+
+--
+
+
+- Does international trade and environmental policy affect local <span style="color:darkgreen">**Environmental Justice (EJ)**</span> problems?
+
+
+
+---
+
+## Relevance
+
+<font size="3">**The efficiency of curbside recycling programs** 
+*Adaland and Caplan (2006), Bohm et al. (2010), Kinnaman (2014), Kinnaman et al. (2014)* 
+
+&rarr; <span style="color:darkgreen">My paper shows that in the absence of an overseas market for recyclables, the U.S. recycling system is inefficient even though it has the "efficient" recycling rate.</span><font size="3">
+
+--
+
+<font size="3">**Behavior Economics of Curbside Recycling** 
+*Kurz et al.(2000), Halvorsen (2010), Ashenmiller (2009), Ashenmiller (2011), Best and Kneip (2019), Berck et al. (2020), Berck et al. (2021)*
+
+&rarr; <span style="color:darkgreen">My paper takes the angle of the international trade policy and use it as an instrument to explore the relationship between the recycling programs and local environmental outcomes in the U.S.</span><font size="3">
+
+--
+
+<font size="3">**Trade and Environment** 
+*Shapiro (2016), Shapiro (2018), Shapiro (2021)*
+
+&rarr; <span style="color:darkgreen">My paper studies the GS policy that directly restricts externality-export and its causal effects on the local methane emissions in the U.S.</span><font size="3">
+
+--
+
+<font size="3">**Environmental Gentrafication and Environmental Justice** 
+*Baden and Coursey (2002), Cameron and McConnaha (2006), Banzhaf and Walsh (2008), Depro et al. (2011), Banzhaf and Walsh (2013), Depro et al. (2015), Banzhaf et al. (2019), Ho (2020), Hernandes and Meng (2020), Shapiro and Walker (2021)*
+
+&rarr; <span style="color:darkgreen">My paper looks at how an exogenous international trade policy affects existing EJ problems in the U.S.</span><font size="3">
+
+---
+
+## Roadmap
+- Data
+  - EPA GreenHouse Gas Report System (GHGRP)
+  - CalRecycle Recycling and Disposal Reporting System (RDRS) Disposal Flow
+  - U.S. Census, Trade Census, BLS, etc.
+
+- Identification
+ - Synthetic Control
+ - Gravity-type fixed effects
+ 
+- U.S. State-level Methane Emissions
+
+- Pollution Relocation 
+
+- Environmental Justice
+
+---
+
+## Preliminary Findings
+
+- U.S. State-level Methane Emissions
+
+  - Many states have seen <span style="color:darkgreen">**statistically significant increases**</span> in methane emission caused by the GS policy.
+  
+  - Heterogeneous changes in domestic methane emissions relate to <span style="color:darkgreen">**historical trade volume of recyclable wastes**</span> and <span style="color:darkgreen">**stringency of environmental regulations**</span>.
+
+--
+
+- Pollution Relocation 
+  - Before China's GS policy, waste pollution tended to relocate to <span style="color:darkgreen">**minority communities**</span>.
+  
+   - After the GS policy, pollution inflows increased more for <span style="color:darkgreen">**low-income White communities**</span> as a result of an increase in waste flows across regions after the exogenous GS policy shock.
+   
+---
+   
+## Data
+- [U.S. EPA Greenhouse Gas Reporting Program (GHGRP)](https://www.epa.gov/ghgreporting)
+ - Methane emissions from landfill facilities 
+ - 2010 to 2020 annually 
+
+- Why Methane Emission?
+ - It is the most "localized" greenhouse gas.
+ - It can serve as a proxy for other pollution.
+- Approximately 8,000 facilities are required to report their emissions annually.
+
+- The industries in the system include power plants, petroleum and natural gas systems, minerals, chemicals, pulp and paper, refineries, waste, etc.
+
+---
+
+## Data
+
+- [California Department of Resources Recycling and Recovery (CalRecycle) Disposal Flow Data](https://www.calrecycle.ca.gov/DataCentral/Materials/)
+
+ - captures the amount of disposal transported by origin of jurisdiction and destination of facility.
+ - 2002 to 2021 quarterly
+ - contains 464 origin jurisdictions and 263 disposal facilities
+ 
+--
+
+- Control variables
+
+ - U.S. Trade Census 
+ - EPA Enforcement and Compliance Historical data
+ - Bureau and Labor and Statistics (BLS) Quarterly Employment and Wages at county-level
+ - U.S. Census. racial composition and median income at census-block level
+  
+---
+
+##Identification : Synthetic Control
+
+.pull-left[
+- Relies on exogenous variation in methane emissions across all other industries in the EPA GHGRP.
+ - power plants, petroleum and natural gas systems, minerals, chemicals, pulp and paper, refineries, etc.
+
+- Takes advantage of the fact that other industries which also emit GHG were not affected by China's GS policy.
+
+- Uses other industries from all states to come up with a synthetic control group
+]
+
+
+.pull-right[
+<img src="graphs/synthetic_control_all_industries.png" width="400" height = "250">
+<img src="graphs/synthetic_control_California_industry.png" width="400" height = "250">
+
+]
+
+---
+
+## Results
+
+
+.pull-left[
+- Train the model using pre-policy time **2010-2017**
+ - calculate weights on state-industry pairs to minimize the prediction error.
+
+- Predict the model using post-policy time **2018-2020**
+ - use calculated weights to predict the counterfactual methane emissions in the absence of GS policy
+
+]
+
+
+.pull-right[
+
+
+
+<img src="graphs/California.png" width="400" height = "250">
+.center[**California**]
+]
+
+- The difference between the actual emission and synthetic emission is the causal effect of China's GS policy on methane emissions.
+---
+
+## Results---Robustness
+.center[![description of the image](graphs/Placebo.png)]
+
+
+---
+## Results 
+
+- After the GS policy took effect, states like California, Washington, New York, Virginia and Texas have seen significant increases in methane emissions in their waste industry by 0.5%, 0.51%, 0.6%, 0.55%, and 0.31% respectively.
+
+- Other states like Florida, Georgia, Alabama, Kentucky, Louisiana, Ohio and Oregon have also seen significant increases in methane emissions, by 0.22%, 0.19%, 0.5%, 0.3%, 0.15%, 0.2% and 0.21% respectively.
+---
+
+## Results
+
+
+.pull-left[
+<img src="graphs/log_export.png" width="400" height = "250">
+- <span style="color:darkgreen"> **&uarr;** </span> **Recyclable wastes a state exported** &rarr; <span style="color:darkgreen"> **&uarr;** </span> methane emissions.
+]
+
+.pull-right[
+<img src="graphs/sign_violation_rate_causal.png" width="400" height = "250">
+- <span style="color:darkgreen"> **&uarr;** </span> **Rate of significant violations a state has with regard to environmental regulations** &rarr; <span style="color:darkgreen"> **&uarr;** </span> methane emissions.
+]
+
+
+
+---
+
+## Pollution Relocation
+
+- Does pollution relocate? 
+ - **Cap and Trade** Clean Air Act requiring new or expanding plants to pay incumbents in the same or neighboring counties to reduce their pollution emissions (Shapiro and Walker (2021)).
+ 
+--
+ 
+ - **US air pollution offset markets**  Clean Air Act has allowed for trading of permanent pollution emissions rights between firms within a metropolitan area (Shapiro and Walker (2020)).
+ 
+--
+ 
+ - <span style="color:darkgreen">**Waste flow**</span> Not In my Backyard (NIMBY) regulation limits interstate waste flows (Ho (2020)).
+
+--
+
+- How does International Trade policy affect pollution relocation? 
+ 
+---
+
+## Pollution Relocation
+
+<img src="graphs/four_counties.png" width="800" height = "450">
+
+.center[**Average Net Increase in Waste flow across regions before and after the GS policy**]
+---
+
+## Pollution Relocation by Racial Composition
+
+
+<img src="graphs/LA_racial_map.png" width="800">
+
+---
+
+## Pollution Relocation by Racial Composition
+
+
+<img src="graphs/pollution_relocation_map_4_counties.png" width="800" height = "500">
+
+
+
+---
+
+## Gravity Model 
+
+
+
+$$log(Y_{ijt}) = \alpha + \beta_{1} log(Dist_{ij}) + \beta_{2} log(X_{it}) + \beta_{3} log(X_{jt}) +$$
+$$\epsilon_{i
+} + \theta_{j} + \mu_{ij} + \eta_{t} + \lambda_{ijt}$$
+
+
+
+
+
+
+- $i$ is origin county or jurisdiction of California. 
+
+- $j$ is destination county or the area that is a 3km buffer within the destination facility.
+
+- $Y_{ijt}$ is the tons of the disposal transported from $i$ to  $j$ in quarter t.
+
+
+- $Dist_{ij}$ is the distance between origin i and destination j.
+
+
+- $X_{it}$ and $X_{jt}$ are racial composition, socioeconomic factors, regulation of environmental stringency, and economies of scale of waste industry of origin and destination i and j. 
+
+
+- Fixed-effects: $\epsilon_{i}$, $\theta_{j}$, $\mu_{ij}$, $\eta_{t}$, $\lambda_{ijt}$
+
+---
+
+## Result
+
+.pull-center[
+![description of the image](graphs/result_county_bp.png)]
+.center[**Gravity Model Estimates at county level**]
+---
+
+## Result
+
+.pull-center[
+![description of the image](graphs/result_county_ap.png)]
+.center[**Gravity Model Estimates at county level**]
+
+---
+
+## Ecological Fallacy
+<img src="graphs/Ecological_fallacy.png" width="800" height = "250">
+.center[**Banzhaf et al. (2019)**]
+---
+## Result
+
+.pull-center[
+![description of the image](graphs/result_census_bp.png)]
+.center[**Gravity Model Estimates at Census Block level**]
+---
+
+## Result
+
+.pull-center[
+![description of the image](graphs/result_census_ap.png)]
+.center[**Gravity Model Estimates at Census Block level**]
+
+
+---
+
+
+## Economies of Scale or Vertical Integration
+
+
+.pull-left[
+![](graphs/Calrecycle_destination_facilities.png)
+]
+
+.pull-right[
+![](graphs/all_facilities_WBJ.png)
+]
+.center[**Data Source: CalRecycle and Waste Business Journal (WBJ)**]
+---
+
+
+## Economies of Scale or Vertical Integration
+
+- Other facilities within <span style="color:darkgreen">**15km Buffer**</span> of the destination facility
+.pull-left[
+![](graphs/San_Bernardino_Economies_of_Scale_map.png)
+]
+
+.pull-right[
+![](graphs/San_Joaquin_Economies_of_Scale_map.png)
+]
+.center[**Data Source : CalRecycle and WBJ**]
+---
+
+
+
+## Conclusion
+
+-I use empirical methods and provide causal evidence that state-level <span style="color:darkgreen">**methane emissions**</span> from the U.S.  waste industry <span style="color:darkgreen">**increased**</span> after the GS policy.
+
+
+
+--
+
+-I find that before China's GS policy, <span style="color:darkgreen">**minority communities**</span> tended to <span style="color:darkgreen">**receive increasing amounts of waste pollution from elsewhere**</span>. 
+
+
+
+--
+
+-However, after China's GS policy, <span style="color:darkgreen">**low income white communities**</span> experienced <span style="color:darkgreen">**greater increases in waste pollution inflows**</span> than minority communities as a result of the exogenous trade policy shock. 
+
+
+
+---
+
+## Future Work Plan
+
+- Control for <span style="color:darkgreen">**California's wild fires**</span>, which could be a noise in my estimates for GS policy.
+
+--
+
+- In addition to racial composition of the community, examine the relationship between <span style="color:darkgreen">**industry vertical integration (economies of scale)**</span> of the community and pollution relocation.
+
+--
+
+- Empirically evaluate if there is <span style="color:darkgreen">**environmental gentrification**</span> happening in the past four decades because of the pollution (waste) relocation.
