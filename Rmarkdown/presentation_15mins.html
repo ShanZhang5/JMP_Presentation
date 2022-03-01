@@ -48,6 +48,26 @@ class: left, bottom, my-title, title-slide
 
 ---
 
+##GS Policy and Trade
+
+.pull-left[
+- Trade of the U.S. plastic wastes export dropped by &lt;span style="color:darkgreen"&gt; **75%**&lt;/span&gt;.
+&lt;br/&gt;&lt;br/&gt;
+&lt;br/&gt;&lt;br/&gt;
+- Zhang (2020) uses spatial analysis and finds that GS policy has minimum impact on recycling centers in the U.S.
+&lt;br/&gt;&lt;br/&gt;
+&lt;br/&gt;&lt;br/&gt;
+- Recyclables went to landfills.
+]
+
+.pull-left[
+&lt;img src="graphs/Trade_World.png" width="400" height = "300"&gt;
+]
+
+
+
+---
+
 ## Research Questions
 
 - What is the effect of China's GS policy on &lt;span style="color:darkgreen"&gt; **State-level Methane Emissions**&lt;/span&gt; from landfill facilities? 
@@ -60,7 +80,7 @@ class: left, bottom, my-title, title-slide
 --
 
 
-- What are the &lt;span style="color:darkgreen"&gt;**Distributional Effects**&lt;/span&gt; of the GS policy on pollution relocation for local communities (at both county and census block levels) in the state of California? 
+- What are the &lt;span style="color:darkgreen"&gt;**Distributional Effects**&lt;/span&gt; of the GS policy on pollution relocation for local communities (at census block levels) in the state of California? 
 
 --
 
@@ -109,7 +129,7 @@ class: left, bottom, my-title, title-slide
 
 - Why Methane Emission?
  - It is the most "localized" greenhouse gas.
- - It can serve as a proxy for other pollution.
+ - It can serve as a proxy for other types pollution.
 - Approximately 8,000 facilities are required to report their emissions annually.
 
 - The industries in the system include power plants, petroleum and natural gas systems, minerals, chemicals, pulp and paper, refineries, waste, etc.
@@ -192,12 +212,12 @@ class: left, bottom, my-title, title-slide
 
 .pull-left[
 &lt;img src="graphs/log_export.png" width="400" height = "250"&gt;
-- The &lt;span style="color:darkgreen"&gt;more&lt;/span&gt; **recyclable wastes a state exported** before the GS policy, the &lt;span style="color:darkgreen"&gt;more&lt;/span&gt; increase in **methane emissions** the state experiences after the GS policy.
+- &lt;span style="color:darkgreen"&gt; **&amp;uarr;** &lt;/span&gt; **Recyclable wastes a state exported** &amp;rarr; &lt;span style="color:darkgreen"&gt; **&amp;uarr;** &lt;/span&gt; increase in methane emissions.
 ]
 
 .pull-right[
 &lt;img src="graphs/sign_violation_rate_causal.png" width="400" height = "250"&gt;
-- The &lt;span style="color:darkgreen"&gt;higher&lt;/span&gt; **rate of significant violations** a state has with regard to environmental regulations, the &lt;span style="color:darkgreen"&gt;more&lt;/span&gt; increase in **methane emissions** in that state after the GS policy.
+- &lt;span style="color:darkgreen"&gt; **&amp;uarr;** &lt;/span&gt; **Rate of significant violations a state has with regard to environmental regulations** &amp;rarr; &lt;span style="color:darkgreen"&gt; **&amp;uarr;** &lt;/span&gt; increase in methane emissions.
 ]
 
 
@@ -255,8 +275,8 @@ class: left, bottom, my-title, title-slide
 
 
 `$$log(Y_{ijt}) = \alpha + \beta_{1} log(Dist_{ij}) + \beta_{2} log(X_{it}) + \beta_{3} log(X_{jt}) +$$`
-`$$\epsilon_{i
-} + \theta_{j} + \mu_{ij} + \eta_{t} + \lambda_{ijt}$$`
+`$$\epsilon_{o
+} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$`
 
 
 
@@ -267,8 +287,11 @@ class: left, bottom, my-title, title-slide
 
 - `\(j\)` is the area that is a 3km buffer within the destination facility.
 
-- `\(Y_{ijt}\)` is the tons of the disposal transported from `\(i\)` to  `\(j\)` in quarter t.
+- `\(o\)` is origin county of California. 
 
+- `\(d\)` is destination county of California.
+
+- `\(Y_{ijt}\)` is the tons of the disposal transported from `\(i\)` to  `\(j\)` in time t.
 
 - `\(Dist_{ij}\)` is the distance between origin i and destination j.
 
@@ -276,7 +299,7 @@ class: left, bottom, my-title, title-slide
 - `\(X_{it}\)` and `\(X_{jt}\)` are racial composition, socioeconomic factors, regulation of environmental stringency, and economies of scale of waste industry of origin and destination i and j. 
 
 
-- Fixed-effects: `\(\epsilon_{i}\)`, `\(\theta_{j}\)`, `\(\mu_{ij}\)`, `\(\eta_{t}\)`, `\(\lambda_{ijt}\)`
+- Fixed-effects: `\(\epsilon_{o}\)`, `\(\theta_{d}\)`, `\(\mu_{od}\)`, `\(\eta_{t}\)`, `\(\lambda_{odt}\)`
 
 
 ---
