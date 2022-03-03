@@ -21,7 +21,7 @@ output:
 
 --
 
-- Recycling rate <span style="color:darkgreen"> **7% &rarr; 32%**</span> from 1960s to currently.
+- Recycling rate <span style="color:darkgreen"> **7% &rarr; 32%**</span> from 1960s to present.
 
 --
 
@@ -39,26 +39,28 @@ output:
 
 - Considerable domestic environmental costs: **air pollution** from re-processing of these materials, **landfill methane (GHG) emissions**, **land and water pollution**, as well as **ocean disposal**.
 
+--
+
+- Zhang (2020) uses spatial analysis and finds that pm2.5 levels only increased 0.1 on average after the GS policy around
+
+--
+
+- Recyclables went to landfills.
 ---
 
 ##GS Policy and Trade
 
-.pull-left[
-- Trade of the U.S. plastic wastes export dropped by <span style="color:darkgreen"> **75%**</span>.
-<br/><br/>
-<br/><br/>
-- Zhang (2020) uses spatial analysis and finds that GS policy has minimum impact on recycling centers in the U.S.
-<br/><br/>
-<br/><br/>
-- Recyclables went to landfills.
-]
+.center[**Plastic Scrap Export Volume by Countries**]
 
-.pull-left[
-<img src="graphs/Trade_World.png" width="400" height = "300">
-]
+<img src="graphs/plastic_export.png" width="800" height = "350">
+.center[UN Comtrade]
+--
 
+- U.S. plastic scrap exports to China dropped by <span style="color:darkgreen"> **99%**</span>.
 
+--
 
+- U.S. plastic scrap exports to the world dropped by <span style="color:darkgreen"> **75%**</span>.
 ---
 
 ## Research Questions
@@ -195,9 +197,8 @@ output:
 ---
 ## Results 
 
-- After the GS policy took effect, states like California, Washington, New York, Virginia and Texas have seen significant increases in methane emissions in their waste industry by 0.5%, 0.51%, 0.6%, 0.55%, and 0.31% respectively.
+<img src="graphs/causal_effects.png" width="850" height = "500">
 
-- Other states like Florida, Georgia, Alabama, Kentucky, Louisiana, Ohio and Oregon have also seen significant increases in methane emissions, by 0.22%, 0.19%, 0.5%, 0.3%, 0.15%, 0.2% and 0.21% respectively.
 ---
 
 ## Results
@@ -254,21 +255,12 @@ output:
 
 ---
 
-## Pollution Relocation by Racial Composition
-
-
-<img src="graphs/pollution_relocation_map_4_counties.png" width="800" height = "500">
-
-
-
----
-
 ## Gravity Model 
 
 
 
-$$log(Y_{ijt}) = \alpha + \beta_{1} log(Dist_{ij}) + \beta_{2} log(X_{it}) + \beta_{3} log(X_{jt}) +$$
-$$\epsilon_{o
+$$log(Y_{ijt}) = \alpha + \beta_{1} log(Dist_{ij}) + \beta_{2} log(R_{i}) + \beta_{3} log(R_{j}) + \beta_{4} log(X_{it}) +$$
+$$\beta_{5} log(X_{jt}) + \epsilon_{o
 } + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 
 
@@ -276,34 +268,36 @@ $$\epsilon_{o
 
 
 
-- $i$ is origin jurisdiction of California. 
+- $i$ is the origin jurisdiction of California 
 
-- $j$ is the area that is a 3km buffer within the destination facility.
+- $j$ is the area that is a 3km buffer within the destination facility
 
-- $o$ is origin county of California. 
+--
 
-- $d$ is destination county of California.
+- $R_{it}$ and $R_{jt}$ <span style="color:darkgreen">**are racial compositions of origin i and destination j.**</span>
 
-- $Y_{ijt}$ is the tons of the disposal transported from $i$ to  $j$ in time t.
+- $Y_{ijt}$ <span style="color:darkgreen">**is the tons of the disposal transported from $i$ to  $j$ in time t.**</span>
+
+--
 
 - $Dist_{ij}$ is the distance between origin i and destination j.
 
+- $X_{it}$ and $X_{jt}$ are socioeconomic factors, regulation of environmental stringency, and economies of scale of waste industry of origin and destination i and j. 
 
-- $X_{it}$ and $X_{jt}$ are racial composition, socioeconomic factors, regulation of environmental stringency, and economies of scale of waste industry of origin and destination i and j. 
-
+--
 
 - Fixed-effects: $\epsilon_{o}$, $\theta_{d}$, $\mu_{od}$, $\eta_{t}$, $\lambda_{odt}$
 
 
 ---
-## Result
+## Results prior to the GS Policy
 
 .pull-center[
 ![description of the image](graphs/result_census_bp.png)]
 .center[**Gravity Model Estimates at Census Block level**]
 ---
 
-## Result
+## Results after the GS Policy
 
 .pull-center[
 ![description of the image](graphs/result_census_ap.png)]
