@@ -17,10 +17,6 @@ output:
 
 ## Introduction
 
-- Recycling has played a pivotal role in preventing the degradation of natural resources in the last few decades.
-
---
-
 - Recycling rate <span style="color:darkgreen"> **7% &rarr; 32%**</span> from 1960s to present.
 
 --
@@ -97,7 +93,7 @@ output:
 
 --
 
-<font size="3">**Environmental Gentrafication and Environmental Justice** 
+<font size="3">**Environmental Gentrification and Environmental Justice** 
 *Baden and Coursey (2002), Cameron and McConnaha (2006), Banzhaf and Walsh (2008), Depro et al. (2011), Banzhaf and Walsh (2013), Depro et al. (2015), Banzhaf et al. (2019), Ho (2020), Hernandes and Meng (2020), Shapiro and Walker (2021)*
 
 &rarr; <span style="color:darkgreen">My paper looks at how an exogenous international trade policy affects existing EJ problems in the U.S.</span><font size="3">
@@ -123,6 +119,7 @@ output:
    
 ## Data
 - [U.S. EPA Greenhouse Gas Reporting Program (GHGRP)](https://www.epa.gov/ghgreporting)
+
  - Methane emissions from landfill facilities 
  - 2010 to 2020 annually 
 
@@ -164,6 +161,7 @@ output:
 ##Identification: Synthetic Control
 
 - Relies on exogenous variation in methane emissions across <span style="color:darkgreen">**all other industries**</span> in the EPA GHGRP.
+
  - power plants, petroleum and natural gas systems, minerals, chemicals, pulp and paper, refineries, etc.
  
 --
@@ -203,24 +201,22 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 ## Placebo Tests
 
 .pull-left[
+<img src="graphs/placebo_test_industries_with_example.png" width="400" height = "300">
+
+<br/>
+<br/>
 
 - Use control industries as my "fake" treatment industries
-
-<br/>
-<br/>
-
-<img src="graphs/placebo_test_industries_with_example.png" width="400" height = "350">
-
 ]
 
 .pull-right[
+<img src="graphs/placebo_treatment_year.png" width="400" height = "300">
+
+<br/>
+<br/>
 
 - Use other years (2013-2017) as my "fake" treatment years
 
-<br/>
-<br/>
-
-<img src="graphs/placebo_treatment_year.png" width="400" height = "350">
 ]
 
 
@@ -271,9 +267,11 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 
 ## Pollution Relocation
 
+.center[**Average net increase in waste flows across regions after the GS policy**]
+
 <img src="graphs/four_counties.png" width="800" height = "450">
 
-.center[**Average Net Increase in Waste flow across regions after the GS policy**]
+
 ---
 
 ## Pollution Relocation by Racial Composition
@@ -347,15 +345,4 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
   - Before China's GS policy, waste pollution tend to relocate to <span style="color:darkgreen">**minority communities**</span>.
   
    - After the GS policy, pollution inflows increased more for <span style="color:darkgreen">**low-income white communities**</span> as a result of an increase in waste flows across regions after the exogenous GS policy shock.
-   
-
----
-
-## Future Work Plan
-
-- Control for <span style="color:darkgreen">**California's wild fires**</span>, which could be a noise in my estimates for GS policy. 
-
-- Examine the relationship between <span style="color:darkgreen">** vertical integration of waste industry (economies of scale)**</span> of the community and pollution relocation.
-
-- Empirically evaluate if there was <span style="color:darkgreen">**environmental gentrification**</span> happening in the past four decades because of the pollution (waste) relocation.
    
