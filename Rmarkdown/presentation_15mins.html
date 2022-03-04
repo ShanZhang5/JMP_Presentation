@@ -72,17 +72,17 @@ class: left, bottom, my-title, title-slide
 
 ## Research Questions
 
-- What is the effect of China's GS policy on &lt;span style="color:darkgreen"&gt; **State-level Methane Emissions**&lt;/span&gt; from landfill facilities? 
+- What is the effect of China's GS policy on &lt;span style="color:darkgreen"&gt; **Domestic Emissions**&lt;/span&gt; from landfill facilities in the U.S.? 
 
 --
 
 
-- What are the key features of states that drive &lt;span style="color:darkgreen"&gt;**Heterogeneous Changes**&lt;/span&gt; in methane emissions?
+- What are the key features of states that drive &lt;span style="color:darkgreen"&gt;**Heterogeneous Changes**&lt;/span&gt; in domestic emissions?
 
 --
 
 
-- What are the &lt;span style="color:darkgreen"&gt;**Distributional Effects**&lt;/span&gt; of the GS policy on pollution relocation for local communities (at census block levels) in the state of California? 
+- What are the &lt;span style="color:darkgreen"&gt;**Distributional Effects**&lt;/span&gt; of the GS policy on pollution relocation for local communities at census block levels? 
 
 --
 
@@ -95,6 +95,22 @@ class: left, bottom, my-title, title-slide
 
 ## Relevance
 
+
+
+&lt;font size="3"&gt;**Trade and Environment** 
+*Shapiro (2016), Shapiro (2018), Shapiro (2021)*
+
+&amp;rarr; &lt;span style="color:darkgreen"&gt;My paper studies the trade policy that directly restricts externality-export and its causal effects on the local emissions in the U.S.&lt;/span&gt;&lt;font size="3"&gt;
+
+--
+
+&lt;font size="3"&gt;**Environmental Gentrafication and Environmental Justice** 
+*Baden and Coursey (2002), Cameron and McConnaha (2006), Banzhaf and Walsh (2008), Depro et al. (2011), Banzhaf and Walsh (2013), Depro et al. (2015), Banzhaf et al. (2019), Ho (2020), Hernandes and Meng (2020), Shapiro and Walker (2021)*
+
+&amp;rarr; &lt;span style="color:darkgreen"&gt;My paper looks at how an exogenous international trade policy affects existing EJ problems in the U.S.&lt;/span&gt;&lt;font size="3"&gt;
+
+--
+
 &lt;font size="3"&gt;**The efficiency of curbside recycling programs** 
 *Adaland and Caplan (2006), Bohm et al. (2010), Kinnaman (2014), Kinnaman et al. (2014)* 
 
@@ -105,21 +121,9 @@ class: left, bottom, my-title, title-slide
 &lt;font size="3"&gt;**Behavioral Economics of Curbside Recycling** 
 *Kurz et al.(2000), Halvorsen (2010), Ashenmiller (2009), Ashenmiller (2011), Best and Kneip (2019), Berck et al. (2020), Berck et al. (2021)*
 
-&amp;rarr; &lt;span style="color:darkgreen"&gt;My paper takes the angle of the exogenous trade policy and use it as an instrument to explore the relationship between the recycling programs and local environmental outcomes in the U.S.&lt;/span&gt;&lt;font size="3"&gt;
+&amp;rarr; &lt;span style="color:darkgreen"&gt;My paper takes the angle of the exogenous trade policy and use it as a tool to explore the relationship between the recycling programs and local environmental outcomes in the U.S.&lt;/span&gt;&lt;font size="3"&gt;
 
---
 
-&lt;font size="3"&gt;**Trade and Environment** 
-*Shapiro (2016), Shapiro (2018), Shapiro (2021)*
-
-&amp;rarr; &lt;span style="color:darkgreen"&gt;My paper studies the trade policy that directly restricts externality-export and its causal effects on the local methane emissions in the U.S.&lt;/span&gt;&lt;font size="3"&gt;
-
---
-
-&lt;font size="3"&gt;**Environmental Gentrafication and Environmental Justice** 
-*Baden and Coursey (2002), Cameron and McConnaha (2006), Banzhaf and Walsh (2008), Depro et al. (2011), Banzhaf and Walsh (2013), Depro et al. (2015), Banzhaf et al. (2019), Ho (2020), Hernandes and Meng (2020), Shapiro and Walker (2021)*
-
-&amp;rarr; &lt;span style="color:darkgreen"&gt;My paper looks at how an exogenous international trade policy affects existing EJ problems in the U.S.&lt;/span&gt;&lt;font size="3"&gt;
 
 
 ---
@@ -129,10 +133,17 @@ class: left, bottom, my-title, title-slide
  - Methane emissions from landfill facilities 
  - 2010 to 2020 annually 
 
+--
+
 - Why Methane Emission?
+ - It can serve as a proxy for general pollution emissions.
  - It is the most "localized" greenhouse gas.
- - It can serve as a proxy for other types pollution.
+
+--
+
 - Approximately 8,000 facilities are required to report their emissions annually.
+
+--
 
 - The industries in the system include power plants, petroleum and natural gas systems, minerals, chemicals, pulp and paper, refineries, waste, etc.
 
@@ -148,7 +159,7 @@ class: left, bottom, my-title, title-slide
  
 --
 
-- Control variables
+- Other Data Sources
 
  - U.S. Trade Census 
  - EPA Enforcement and Compliance Historical data
@@ -159,21 +170,20 @@ class: left, bottom, my-title, title-slide
 
 ##Identification: Synthetic Control
 
-.pull-left[
 - Relies on exogenous variation in methane emissions across all other industries in the EPA GHGRP.
  - power plants, petroleum and natural gas systems, minerals, chemicals, pulp and paper, refineries, etc.
 
 - Takes advantage of the fact that other industries which also emit GHG were not affected by China's GS policy.
 
 - Uses other industries from all states to come up with a synthetic control group
-]
 
 
-.pull-right[
-&lt;img src="graphs/synthetic_control_all_industries.png" width="400" height = "250"&gt;
-&lt;img src="graphs/synthetic_control_California_industry.png" width="400" height = "250"&gt;
+`$$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$`
+`$$\hat{Y_{1t}^{N}} = \sum_{j=2}^{J+1} w_{j} Y_{1t}$$`
 
-]
+
+
+
 
 ---
 
@@ -200,24 +210,45 @@ class: left, bottom, my-title, title-slide
 
 - The difference between the actual emission and synthetic emission is the causal effect of China's GS policy on methane emissions.
 
+---
+ 
+## Placebo Test
+
+.pull-left[
+
+- Use control industries as my "fake" treatment industries
+
+&lt;br/&gt;
+&lt;br/&gt;
+
+![](graphs/placebo_test_industries_with_example.png)
+
+]
+
+.pull-right[
+
+- Use other years (2013-2017) as my "fake" treatment years
+
+&lt;br/&gt;
+&lt;br/&gt;
+
+![](graphs/placebo_treatment_year.png)
+]
+
 
 ---
-## Results 
 
-&lt;img src="graphs/causal_effects.png" width="850" height = "500"&gt;
-
----
 
 ## Results
 
 
 .pull-left[
-&lt;img src="graphs/log_export.png" width="400" height = "250"&gt;
+&lt;img src="graphs/correlation_causal_trade.png" width="300" height = "300"&gt;
 - &lt;span style="color:darkgreen"&gt; **&amp;uarr;** &lt;/span&gt; **Recyclable wastes a state exported** &amp;rarr; &lt;span style="color:darkgreen"&gt; **&amp;uarr;** &lt;/span&gt; increase in methane emissions.
 ]
 
 .pull-right[
-&lt;img src="graphs/sign_violation_rate_causal.png" width="400" height = "250"&gt;
+&lt;img src="graphs/correlation_causal_violation_rate.png" width="300" height = "300"&gt;
 - &lt;span style="color:darkgreen"&gt; **&amp;uarr;** &lt;/span&gt; **Rate of significant violations a state has with regard to environmental regulations** &amp;rarr; &lt;span style="color:darkgreen"&gt; **&amp;uarr;** &lt;/span&gt; increase in methane emissions.
 ]
 
@@ -226,6 +257,10 @@ class: left, bottom, my-title, title-slide
 ---
 
 ## Pollution Relocation
+
+- How does &lt;span style="color:darkgreen"&gt;**International Trade policy**&lt;/span&gt; affect &lt;span style="color:darkgreen"&gt;**pollution relocation**&lt;/span&gt;? 
+
+--
 
 - Does pollution relocate? 
  - **Cap and Trade** Clean Air Act requiring new or expanding plants to pay incumbents in the same or neighboring counties to reduce their pollution emissions (Shapiro and Walker (2021)).
@@ -242,9 +277,7 @@ class: left, bottom, my-title, title-slide
  
  - &lt;span style="color:darkgreen"&gt;**Waste flow**&lt;/span&gt; Not In my Backyard (NIMBY) regulation limits interstate waste flows (Ho (2020)).
 
---
 
-- How does &lt;span style="color:darkgreen"&gt;**International Trade policy**&lt;/span&gt; affect &lt;span style="color:darkgreen"&gt;**pollution relocation**&lt;/span&gt;? 
  
 ---
 
