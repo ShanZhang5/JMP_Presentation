@@ -265,17 +265,24 @@ July 12, 2019
 
 ##Identification: Synthetic Control
 
-- Relies on exogenous variation in methane emissions across all other industries in the EPA GHGRP.
+- Relies on exogenous variation in methane emissions across &lt;span style="color:darkgreen"&gt;**all other industries**&lt;/span&gt; in the EPA GHGRP.
+
  - power plants, petroleum and natural gas systems, minerals, chemicals, pulp and paper, refineries, etc.
+ 
+--
 
 - Takes advantage of the fact that other industries which also emit GHG were not affected by China's GS policy.
 
 - Uses other industries from all states to come up with a synthetic control group
 
+--
 
-`$$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$` where
+- Train the model using pre-policy time **2010-2017**
+ - calculate weights on state-industry pairs to minimize the prediction error.
 `$$\hat{Y_{1t}^{N}} = \sum_{j=2}^{J+1} w_{j} Y_{1t}$$`
 
+
+- Predict the counterfactual methane emissions using post-policy time **2018-2020** in the absence of GS policy 
 
 
 
@@ -285,48 +292,36 @@ July 12, 2019
 ## Results
 
 
-.pull-left[
-- Train the model using pre-policy time **2010-2017**
- - calculate weights on state-industry pairs to minimize the prediction error.
-
-- Predict the model using post-policy time **2018-2020**
- - use calculated weights to predict the counterfactual methane emissions in the absence of GS policy
-
-]
 
 
-.pull-right[
-
-
-
-&lt;img src="graphs/California.png" width="400" height = "250"&gt;
+&lt;img src="graphs/California.png" width="600" height = "350"&gt;
 .center[**California**]
-]
 
 - The difference between the actual emission and synthetic emission is the causal effect of China's GS policy on methane emissions.
----
 
-## Placebo Test
+`$$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$`
+
+---
+ 
+## Placebo Tests
 
 .pull-left[
+&lt;img src="graphs/placebo_test_industries_with_example.png" width="400" height = "300"&gt;
+
+&lt;br/&gt;
+&lt;br/&gt;
 
 - Use control industries as my "fake" treatment industries
-
-&lt;br/&gt;
-&lt;br/&gt;
-
-![](graphs/placebo_test_industries_with_example.png)
-
 ]
 
 .pull-right[
+&lt;img src="graphs/placebo_treatment_year.png" width="400" height = "300"&gt;
+
+&lt;br/&gt;
+&lt;br/&gt;
 
 - Use other years (2013-2017) as my "fake" treatment years
 
-&lt;br/&gt;
-&lt;br/&gt;
-
-![](graphs/placebo_treatment_year.png)
 ]
 
 
@@ -395,33 +390,40 @@ July 12, 2019
 ---
 
 
+---
+
 ## Gravity Model 
 
 
 
-`$$log(Y_{ijt}) = \alpha + \beta_{1} log(Dist_{ij}) + \beta_{2} log(X_{it}) + \beta_{3} log(X_{jt}) +$$`
-`$$\epsilon_{i
-} + \theta_{j} + \mu_{ij} + \eta_{t} + \lambda_{ijt}$$`
+`$$log(Y_{ijt}) = \alpha + \beta_{1} log(Dist_{ij}) + \beta_{2} R_{i} + \beta_{3} R_{j} + \beta_{4} log(X_{it}) + \beta_{5} log(X_{jt}) +$$`
+`$$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$`
 
 
 
 
 
 
-- `\(i\)` is origin county or jurisdiction of California. 
+- `\(i\)` is the origin jurisdiction of California 
 
-- `\(j\)` is destination county or the area that is a 3km buffer within the destination facility.
+- `\(j\)` is the area that is a 3km buffer within the destination facility
 
-- `\(Y_{ijt}\)` is the tons of the disposal transported from `\(i\)` to  `\(j\)` in quarter t.
+--
 
+- `\(R_{it}\)` and `\(R_{jt}\)` &lt;span style="color:darkgreen"&gt;**are racial compositions of origin i and destination j.**&lt;/span&gt;
+
+- `\(Y_{ijt}\)` &lt;span style="color:darkgreen"&gt;**is the tons of the disposal transported from `\(i\)` to  `\(j\)` in time t.**&lt;/span&gt;
+
+--
 
 - `\(Dist_{ij}\)` is the distance between origin i and destination j.
 
+- `\(X_{it}\)` and `\(X_{jt}\)` are socioeconomic factors, regulation of environmental stringency, and economies of scale of waste industry of origin and destination i and j. 
 
-- `\(X_{it}\)` and `\(X_{jt}\)` are racial composition, socioeconomic factors, regulation of environmental stringency, and economies of scale of waste industry of origin and destination i and j. 
+--
 
+- Fixed-effects: `\(\epsilon_{o}\)`, `\(\theta_{d}\)`, `\(\mu_{od}\)`, `\(\eta_{t}\)`, `\(\lambda_{odt}\)`
 
-- Fixed-effects: `\(\epsilon_{i}\)`, `\(\theta_{j}\)`, `\(\mu_{ij}\)`, `\(\eta_{t}\)`, `\(\lambda_{ijt}\)`
 
 
 ---
