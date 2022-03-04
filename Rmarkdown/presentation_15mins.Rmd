@@ -163,17 +163,23 @@ output:
 
 ##Identification: Synthetic Control
 
-- Relies on exogenous variation in methane emissions across all other industries in the EPA GHGRP.
+- Relies on exogenous variation in methane emissions across <span style="color:darkgreen">**all other industries**</span> in the EPA GHGRP.
  - power plants, petroleum and natural gas systems, minerals, chemicals, pulp and paper, refineries, etc.
+ 
+--
 
 - Takes advantage of the fact that other industries which also emit GHG were not affected by China's GS policy.
 
 - Uses other industries from all states to come up with a synthetic control group
 
+--
 
-$$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
+- Train the model using pre-policy time **2010-2017**
+ - calculate weights on state-industry pairs to minimize the prediction error.
 $$\hat{Y_{1t}^{N}} = \sum_{j=2}^{J+1} w_{j} Y_{1t}$$
 
+
+- Predict the counterfactual methane emissions using post-policy time **2018-2020** in the absence of GS policy 
 
 
 
@@ -183,29 +189,18 @@ $$\hat{Y_{1t}^{N}} = \sum_{j=2}^{J+1} w_{j} Y_{1t}$$
 ## Results
 
 
-.pull-left[
-- Train the model using pre-policy time **2010-2017**
- - calculate weights on state-industry pairs to minimize the prediction error.
-
-- Predict the model using post-policy time **2018-2020**
- - use calculated weights to predict the counterfactual methane emissions in the absence of GS policy
-
-]
 
 
-.pull-right[
-
-
-
-<img src="graphs/California.png" width="400" height = "250">
+<img src="graphs/California.png" width="600" height = "350">
 .center[**California**]
-]
 
 - The difference between the actual emission and synthetic emission is the causal effect of China's GS policy on methane emissions.
 
+$$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
+
 ---
  
-## Placebo Test
+## Placebo Tests
 
 .pull-left[
 
@@ -214,7 +209,7 @@ $$\hat{Y_{1t}^{N}} = \sum_{j=2}^{J+1} w_{j} Y_{1t}$$
 <br/>
 <br/>
 
-![](graphs/placebo_test_industries_with_example.png)
+<img src="graphs/placebo_test_industries_with_example.png" width="400" height = "350">
 
 ]
 
@@ -225,7 +220,7 @@ $$\hat{Y_{1t}^{N}} = \sum_{j=2}^{J+1} w_{j} Y_{1t}$$
 <br/>
 <br/>
 
-![](graphs/placebo_treatment_year.png)
+<img src="graphs/placebo_treatment_year.png" width="400" height = "350">
 ]
 
 
@@ -292,9 +287,8 @@ $$\hat{Y_{1t}^{N}} = \sum_{j=2}^{J+1} w_{j} Y_{1t}$$
 
 
 
-$$log(Y_{ijt}) = \alpha + \beta_{1} log(Dist_{ij}) + \beta_{2} log(R_{i}) + \beta_{3} log(R_{j}) + \beta_{4} log(X_{it}) +$$
-$$\beta_{5} log(X_{jt}) + \epsilon_{o
-} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
+$$log(Y_{ijt}) = \alpha + \beta_{1} log(Dist_{ij}) + \beta_{2} R_{i} + \beta_{3} R_{j} + \beta_{4} log(X_{it}) + \beta_{5} log(X_{jt}) +$$
+$$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 
 
 
