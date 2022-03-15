@@ -15,7 +15,7 @@ class: left, bottom, my-title, title-slide
 # The Effects of China’s Waste Import Ban on Pollution Relocation in the U.S.
 ## University of Oregon
 ### Shan Zhang
-### 2022/2/18
+### 2022/3/4
 
 ---
 
@@ -68,23 +68,22 @@ class: left, bottom, my-title, title-slide
 
 ## Research Questions
 
-- What is the effect of China's GS policy on &lt;span style="color:darkgreen"&gt; **Domestic Emissions**&lt;/span&gt; from landfill facilities in the U.S.? 
+&lt;br/&gt;
+&lt;br/&gt;
+
+- In the **U.S.**
+
+ - What is the effect of China's GS policy on &lt;span style="color:darkgreen"&gt; **Domestic Emissions**&lt;/span&gt; from landfill facilities in the U.S.? 
+
+&lt;br/&gt;
+&lt;br/&gt;
 
 --
 
 
-- What are the key features of states that drive &lt;span style="color:darkgreen"&gt;**Heterogeneous Changes**&lt;/span&gt; in domestic emissions?
+- In the state of **California**
 
---
-
-
-- What are the &lt;span style="color:darkgreen"&gt;**Distributional Effects**&lt;/span&gt; of the GS policy on pollution relocation for local communities at census block levels? 
-
---
-
-
-- Does international trade and environmental policy affect local &lt;span style="color:darkgreen"&gt;**Environmental Justice (EJ)**&lt;/span&gt; problems?
-
+ - What are the &lt;span style="color:darkgreen"&gt;**Distributional Effects**&lt;/span&gt; of the GS policy on pollution relocation for local communities at census block levels? What are &lt;span style="color:darkgreen"&gt;**Environmental Justice (EJ)**&lt;/span&gt; implications?
 
 
 ---
@@ -123,6 +122,28 @@ class: left, bottom, my-title, title-slide
 
 
 ---
+
+## Environmental Outcome Measurement
+
+.pull-left[ 
+&lt;img src="graphs/methane_emissions_pinpoint.png" width="500" height = "200"&gt;
+&lt;img src="graphs/methane_emission_Canada.png" width="500" height = "200"&gt;
+.center[GHGSat’s satellite showed methane from landfills (upper: Buenos Aires, Argentina. lower: Alberta, Canada)]
+]
+
+
+.pull-right[ 
+- Why Methane Emission?
+
+ - It can serve as a **proxy** for general pollution emissions.
+ 
+ - Methane is far more potent at trapping the sun’s heat than carbon emissions.
+ 
+ - Satellite data is available only from 2020.
+ 
+ - Need a consistent measured emission data from 2010 to 2020
+]
+---
    
 ## Data
 - [U.S. EPA Greenhouse Gas Reporting Program (GHGRP)](https://www.epa.gov/ghgreporting)
@@ -132,17 +153,18 @@ class: left, bottom, my-title, title-slide
 
 --
 
-- Why Methane Emission?
- - It can serve as a proxy for general pollution emissions.
- - It is the most "localized" greenhouse gas.
-
---
-
 - Approximately 8,000 facilities are required to report their emissions annually.
 
 --
 
 - The industries in the system include power plants, petroleum and natural gas systems, minerals, chemicals, pulp and paper, refineries, waste, etc.
+
+--
+
+
+- Data generation process:
+ - Facilities in waste industry report the **amount of wastes accepted** annually. 
+ - Methane Emission is calculated through a complicated model embedded in U.S. EPA.
 
 ---
 
@@ -150,9 +172,9 @@ class: left, bottom, my-title, title-slide
 
 - [California Department of Resources Recycling and Recovery (CalRecycle) Disposal Flow Data](https://www.calrecycle.ca.gov/DataCentral/Materials/)
 
- - captures the amount of disposal transported by origin jurisdiction and destination facility.
+ - Captures the amount of disposal transported by origin jurisdiction and destination facility.
  - 2002 to 2021 quarterly
- - contains 464 origin jurisdictions and 263 disposal facilities
+ - Contains 464 origin jurisdictions and 263 disposal facilities
  
 --
 
@@ -240,7 +262,7 @@ class: left, bottom, my-title, title-slide
 
 .pull-right[
 &lt;img src="graphs/correlation_causal_violation_rate.png" width="300" height = "300"&gt;
-- &lt;span style="color:darkgreen"&gt; **&amp;uarr;** &lt;/span&gt; **Rate of significant violations a state has with regard to environmental regulations** &amp;rarr; &lt;span style="color:darkgreen"&gt; **&amp;uarr;** &lt;/span&gt; increase in methane emissions.
+- &lt;span style="color:darkgreen"&gt; **&amp;uarr;** &lt;/span&gt; **Rate of "significant" violations a state has with regard to environmental regulations** &amp;rarr; &lt;span style="color:darkgreen"&gt; **&amp;uarr;** &lt;/span&gt; increase in methane emissions.
 ]
 
 
@@ -289,33 +311,34 @@ class: left, bottom, my-title, title-slide
 
 ---
 
-## Gravity Model 
+## Gravity-type Model 
 
 
 
-`$$log(Y_{ijt}) = \alpha + \beta_{1} log(Dist_{ij}) + \beta_{2} R_{i} + \beta_{3} R_{j} + \beta_{4} log(X_{it}) + \beta_{5} log(X_{jt}) +$$`
+`$$log(Y_{ijt}) = \alpha + \beta_{1} log(Dist_{ij}) + \beta_{2} log(R_{j}) + \beta_{3} log(X_{jt})$$`
+`$$+ \beta_{5} GS_{post} * log(R_{j}) + \beta_{6} GS_{post} * log(X_{jt})$$`
 `$$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$`
 
 
 
 
+- &lt;font size="3"&gt; **i** origin jurisdiction of California; **o** origin county.&lt;font size="3"&gt;
 
+- &lt;font size="3"&gt; **j** area that is a 3km buffer within the destination facility; **d** destination county.&lt;font size="3"&gt;
 
-- `\(i\)` is the origin jurisdiction of California 
-
-- `\(j\)` is the area that is a 3km buffer within the destination facility
-
---
-
-- `\(R_{it}\)` and `\(R_{jt}\)` &lt;span style="color:darkgreen"&gt;**are racial compositions of origin i and destination j.**&lt;/span&gt;
-
-- `\(Y_{ijt}\)` &lt;span style="color:darkgreen"&gt;**is the tons of the disposal transported from `\(i\)` to  `\(j\)` in time t.**&lt;/span&gt;
+- &lt;font size="3"&gt; **t**  year-quarter.&lt;font size="3"&gt;
 
 --
 
-- `\(Dist_{ij}\)` is the distance between origin i and destination j.
+- `\(R_{jt}\)` &lt;font size="3"&gt; &lt;span style="color:darkgreen"&gt;**racial compositions of destination j.**&lt;/span&gt;&lt;font size="3"&gt;
 
-- `\(X_{it}\)` and `\(X_{jt}\)` are socioeconomic factors, regulation of environmental stringency, and economies of scale of waste industry of origin and destination i and j. 
+- `\(Y_{ijt}\)` &lt;font size="3"&gt;&lt;span style="color:darkgreen"&gt;**tons of the disposal transported from `\(i\)` to  `\(j\)` in year quarter t.**&lt;/span&gt;&lt;font size="3"&gt;
+
+- `\(GS_{post}\)` &lt;font size="3"&gt;&lt;span style="color:darkgreen"&gt;**dummy variable for the GS policy.**&lt;/span&gt;&lt;font size="3"&gt;
+
+- `\(Dist_{ij}\)` &lt;font size="3"&gt;distance between origin i and destination j.&lt;font size="3"&gt;
+
+-  `\(X_{jt}\)` &lt;font size="3"&gt;median income, regulation of environmental stringency, and economies of scale of waste industry of destination j. &lt;font size="3"&gt;
 
 --
 
@@ -341,18 +364,23 @@ class: left, bottom, my-title, title-slide
 
 ## Conclusion Preliminary Findings
 
-- U.S. State-level Methane Emissions
+- **U.S. State-level Methane Emissions**
 
-  - Many states have seen &lt;span style="color:darkgreen"&gt;**statistically significant increases**&lt;/span&gt; in methane emission caused by the GS policy.
+  - Many states have seen &lt;span style="color:darkgreen"&gt;statistically significant increases&lt;/span&gt; in methane emission.
   
-  - Heterogeneous changes in domestic methane emissions relate to &lt;span style="color:darkgreen"&gt;**historical trade volume of recyclable wastes**&lt;/span&gt; and &lt;span style="color:darkgreen"&gt;**stringency of environmental regulations**&lt;/span&gt;.
+  - Relate to &lt;span style="color:darkgreen"&gt;historical trade volume&lt;/span&gt; and &lt;span style="color:darkgreen"&gt;stringency of environmental regulations&lt;/span&gt;.
 
 --
 
-- Pollution Relocation 
-  - Before China's GS policy, waste pollution tend to relocate to &lt;span style="color:darkgreen"&gt;**minority communities**&lt;/span&gt;.
+- **California Pollution Relocation** 
+
+  - Before China's GS policy
   
-   - After the GS policy, pollution inflows increased more for &lt;span style="color:darkgreen"&gt;**low-income white communities**&lt;/span&gt; as a result of an increase in waste flows across regions after the exogenous GS policy shock.
+   Waste pollution tend to relocate to &lt;span style="color:darkgreen"&gt;minority communities&lt;/span&gt;.
+   
+  - After China's GS policy
+  
+   Pollution inflows increased more for &lt;span style="color:darkgreen"&gt;lower-income white communities&lt;/span&gt;.
    
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>

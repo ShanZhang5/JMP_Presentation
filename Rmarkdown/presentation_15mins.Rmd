@@ -2,7 +2,7 @@
 title: "The Effects of China's Waste Import Ban on Pollution Relocation in the U.S."
 subtitle: "University of Oregon"
 author: "Shan Zhang"
-date: "2022/2/18"
+date: "2022/3/4"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -61,23 +61,22 @@ output:
 
 ## Research Questions
 
-- What is the effect of China's GS policy on <span style="color:darkgreen"> **Domestic Emissions**</span> from landfill facilities in the U.S.? 
+<br/>
+<br/>
+
+- In the **U.S.**
+
+ - What is the effect of China's GS policy on <span style="color:darkgreen"> **Domestic Emissions**</span> from landfill facilities in the U.S.? 
+
+<br/>
+<br/>
 
 --
 
 
-- What are the key features of states that drive <span style="color:darkgreen">**Heterogeneous Changes**</span> in domestic emissions?
+- In the state of **California**
 
---
-
-
-- What are the <span style="color:darkgreen">**Distributional Effects**</span> of the GS policy on pollution relocation for local communities at census block levels? 
-
---
-
-
-- Does international trade and environmental policy affect local <span style="color:darkgreen">**Environmental Justice (EJ)**</span> problems?
-
+ - What are the <span style="color:darkgreen">**Distributional Effects**</span> of the GS policy on pollution relocation for local communities at census block levels? What are <span style="color:darkgreen">**Environmental Justice (EJ)**</span> implications?
 
 
 ---
@@ -116,6 +115,28 @@ output:
 
 
 ---
+
+## Environmental Outcome Measurement
+
+.pull-left[ 
+<img src="graphs/methane_emissions_pinpoint.png" width="500" height = "200">
+<img src="graphs/methane_emission_Canada.png" width="500" height = "200">
+.center[GHGSat’s satellite showed methane from landfills (upper: Buenos Aires, Argentina. lower: Alberta, Canada)]
+]
+
+
+.pull-right[ 
+- Why Methane Emission?
+
+ - It can serve as a **proxy** for general pollution emissions.
+ 
+ - Methane is far more potent at trapping the sun’s heat than carbon emissions.
+ 
+ - Satellite data is available only from 2020.
+ 
+ - Need a consistent measured emission data from 2010 to 2020
+]
+---
    
 ## Data
 - [U.S. EPA Greenhouse Gas Reporting Program (GHGRP)](https://www.epa.gov/ghgreporting)
@@ -125,17 +146,18 @@ output:
 
 --
 
-- Why Methane Emission?
- - It can serve as a proxy for general pollution emissions.
- - It is the most "localized" greenhouse gas.
-
---
-
 - Approximately 8,000 facilities are required to report their emissions annually.
 
 --
 
 - The industries in the system include power plants, petroleum and natural gas systems, minerals, chemicals, pulp and paper, refineries, waste, etc.
+
+--
+
+
+- Data generation process:
+ - Facilities in waste industry report the **amount of wastes accepted** annually. 
+ - Methane Emission is calculated through a complicated model embedded in U.S. EPA.
 
 ---
 
@@ -143,9 +165,9 @@ output:
 
 - [California Department of Resources Recycling and Recovery (CalRecycle) Disposal Flow Data](https://www.calrecycle.ca.gov/DataCentral/Materials/)
 
- - captures the amount of disposal transported by origin jurisdiction and destination facility.
+ - Captures the amount of disposal transported by origin jurisdiction and destination facility.
  - 2002 to 2021 quarterly
- - contains 464 origin jurisdictions and 263 disposal facilities
+ - Contains 464 origin jurisdictions and 263 disposal facilities
  
 --
 
@@ -233,7 +255,7 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 
 .pull-right[
 <img src="graphs/correlation_causal_violation_rate.png" width="300" height = "300">
-- <span style="color:darkgreen"> **&uarr;** </span> **Rate of significant violations a state has with regard to environmental regulations** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
+- <span style="color:darkgreen"> **&uarr;** </span> **Rate of "significant" violations a state has with regard to environmental regulations** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
 ]
 
 
@@ -282,33 +304,34 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 
 ---
 
-## Gravity Model 
+## Gravity-type Model 
 
 
 
-$$log(Y_{ijt}) = \alpha + \beta_{1} log(Dist_{ij}) + \beta_{2} R_{i} + \beta_{3} R_{j} + \beta_{4} log(X_{it}) + \beta_{5} log(X_{jt}) +$$
+$$log(Y_{ijt}) = \alpha + \beta_{1} log(Dist_{ij}) + \beta_{2} log(R_{j}) + \beta_{3} log(X_{jt})$$
+$$+ \beta_{5} GS_{post} * log(R_{j}) + \beta_{6} GS_{post} * log(X_{jt})$$
 $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 
 
 
 
+- <font size="3"> **i** origin jurisdiction of California; **o** origin county.<font size="3">
 
+- <font size="3"> **j** area that is a 3km buffer within the destination facility; **d** destination county.<font size="3">
 
-- $i$ is the origin jurisdiction of California 
-
-- $j$ is the area that is a 3km buffer within the destination facility
-
---
-
-- $R_{it}$ and $R_{jt}$ <span style="color:darkgreen">**are racial compositions of origin i and destination j.**</span>
-
-- $Y_{ijt}$ <span style="color:darkgreen">**is the tons of the disposal transported from $i$ to  $j$ in time t.**</span>
+- <font size="3"> **t**  year-quarter.<font size="3">
 
 --
 
-- $Dist_{ij}$ is the distance between origin i and destination j.
+- $R_{jt}$ <font size="3"> <span style="color:darkgreen">**racial compositions of destination j.**</span><font size="3">
 
-- $X_{it}$ and $X_{jt}$ are socioeconomic factors, regulation of environmental stringency, and economies of scale of waste industry of origin and destination i and j. 
+- $Y_{ijt}$ <font size="3"><span style="color:darkgreen">**tons of the disposal transported from $i$ to  $j$ in year quarter t.**</span><font size="3">
+
+- $GS_{post}$ <font size="3"><span style="color:darkgreen">**dummy variable for the GS policy.**</span><font size="3">
+
+- $Dist_{ij}$ <font size="3">distance between origin i and destination j.<font size="3">
+
+-  $X_{jt}$ <font size="3">median income, regulation of environmental stringency, and economies of scale of waste industry of destination j. <font size="3">
 
 --
 
@@ -334,16 +357,21 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 
 ## Conclusion Preliminary Findings
 
-- U.S. State-level Methane Emissions
+- **U.S. State-level Methane Emissions**
 
-  - Many states have seen <span style="color:darkgreen">**statistically significant increases**</span> in methane emission caused by the GS policy.
+  - Many states have seen <span style="color:darkgreen">statistically significant increases</span> in methane emission.
   
-  - Heterogeneous changes in domestic methane emissions relate to <span style="color:darkgreen">**historical trade volume of recyclable wastes**</span> and <span style="color:darkgreen">**stringency of environmental regulations**</span>.
+  - Relate to <span style="color:darkgreen">historical trade volume</span> and <span style="color:darkgreen">stringency of environmental regulations</span>.
 
 --
 
-- Pollution Relocation 
-  - Before China's GS policy, waste pollution tend to relocate to <span style="color:darkgreen">**minority communities**</span>.
+- **California Pollution Relocation** 
+
+  - Before China's GS policy
   
-   - After the GS policy, pollution inflows increased more for <span style="color:darkgreen">**low-income white communities**</span> as a result of an increase in waste flows across regions after the exogenous GS policy shock.
+   Waste pollution tend to relocate to <span style="color:darkgreen">minority communities</span>.
+   
+  - After China's GS policy
+  
+   Pollution inflows increased more for <span style="color:darkgreen">lower-income white communities</span>.
    
