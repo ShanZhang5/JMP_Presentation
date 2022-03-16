@@ -53,11 +53,11 @@ output:
 .center[UN Comtrade Data]
 --
 
-- U.S. plastic scrap exports to China dropped by <span style="color:darkgreen"> **99%**</span>.
+- U.S. plastic scrap exports to China dropped by <span style="color:darkgreen"> **99%**</span>
 
 --
 
-- U.S. plastic scrap exports to the ROW are <span style="color:darkgreen"> **decreasing**</span> after China's GS policy implemented (red dotted line).
+- U.S. plastic scrap exports to the ROW <span style="color:darkgreen"> **increased, then  decreased** </span> after China's GS policy
 ---
 
 ## Research Questions
@@ -128,7 +128,7 @@ output:
 
 
 .pull-right[ 
-- Why use methane emissions?
+- Why use <span style="color:darkgreen"> **methane**</span> emissions?
 
  - They are a **proxy** for general pollution emissions
  
@@ -344,14 +344,14 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 ## Results prior to the GS Policy
 
 .pull-center[
-![description of the image](graphs/result_census_bp.png)]
+![description of the image](graphs/result_bp.png)]
 .center[**Gravity Model Estimates at Census Block level**]
 ---
 
 ## Results after the GS Policy
 
 .pull-center[
-![description of the image](graphs/result_census_ap.png)]
+![description of the image](graphs/result_ap.png)]
 .center[**Gravity Model Estimates at Census Block level**]
 
 
@@ -375,5 +375,5 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
    
   - After China's GS policy
   
-    Inflows increased more for <span style="color:darkgreen">low-inc. white communities</span>
+    Inflows increased more for <span style="color:darkgreen">remote low-income white communities</span>
    
