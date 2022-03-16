@@ -49,7 +49,7 @@ output:
 
 .center[**Plastic Scrap Export Volume by Countries**]
 
-<img src="graphs/motivation.png" width="800" height = "350">
+<img src="graphs/motivation_new.png" width="800" height = "350">
 .center[UN Comtrade Data]
 --
 
@@ -57,7 +57,7 @@ output:
 
 --
 
-- U.S. plastic scrap exports to the ROW dropped are <span style="color:darkgreen"> **decreasing**</span>.
+- U.S. plastic scrap exports to the ROW are <span style="color:darkgreen"> **decreasing**</span> after China's GS policy implemented (red dotted line).
 ---
 
 ## Research Questions
