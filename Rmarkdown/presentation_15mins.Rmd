@@ -97,7 +97,7 @@ output:
 <font size="3">**Environmental Gentrification and Environmental Justice** 
 *Baden and Coursey (2002), Cameron and McConnaha (2006), Banzhaf and Walsh (2008), Depro et al. (2011), Banzhaf and Walsh (2013), Depro et al. (2015), Banzhaf et al. (2019), Ho (2020), Hernandes and Meng (2020), Shapiro and Walker (2021)*
 
-&rarr; <span style="color:darkgreen">My innovation: how an exogenous intl. trade policy affects U.S. EJ problems.</span><font size="3">
+&rarr; <span style="color:darkgreen">My innovation: examine how an exogenous intl. trade policy affects U.S. EJ problems.</span><font size="3">
 
 --
 
@@ -344,17 +344,45 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 ## Results prior to the GS Policy
 
 .pull-center[
-![description of the image](graphs/result_bp.png)]
+![description of the image](graphs/result_bp_1.png)]
+.center[**Gravity Model Estimates at Census Block level**]
+---
+
+## Results prior to the GS Policy
+
+.pull-center[
+![description of the image](graphs/result_bp_2.png)]
+.center[**Gravity Model Estimates at Census Block level**]
+---
+
+## Results prior to the GS Policy
+
+.pull-center[
+![description of the image](graphs/result_bp_3.png)]
 .center[**Gravity Model Estimates at Census Block level**]
 ---
 
 ## Results after the GS Policy
 
 .pull-center[
-![description of the image](graphs/result_ap.png)]
+![description of the image](graphs/result_ap_1.png)]
 .center[**Gravity Model Estimates at Census Block level**]
 
+---
 
+## Results after the GS Policy
+
+.pull-center[
+![description of the image](graphs/result_ap_2.png)]
+.center[**Gravity Model Estimates at Census Block level**]
+
+---
+
+## Results after the GS Policy
+
+.pull-center[
+![description of the image](graphs/result_ap_3.png)]
+.center[**Gravity Model Estimates at Census Block level**]
 ---
 
 ## Conclusion Preliminary Findings
