@@ -240,7 +240,7 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 ## Placebo Tests
 
 .pull-left[
-<img src="graphs/placebo_test_industries_with_example.png" width="400" height = "300">
+<img src="graphs/placebo_industry_1.png" width="400" height = "300">
 
 <br/>
 <br/>
@@ -249,7 +249,127 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 ]
 
 .pull-right[
-<img src="graphs/placebo_treatment_year.png" width="400" height = "300">
+
+<br/>
+<br/>
+
+
+
+]
+
+
+---
+
+## Placebo Tests
+
+.pull-left[
+<img src="graphs/placebo_industries_2.png" width="400" height = "300">
+
+<br/>
+<br/>
+
+- Use control industries as "fake" treatment industries
+]
+
+.pull-right[
+
+
+<br/>
+<br/>
+
+
+
+]
+
+
+---
+
+
+## Placebo Tests
+
+.pull-left[
+<img src="graphs/placebo_industries_3.png" width="400" height = "300">
+
+<br/>
+<br/>
+
+- Use control industries as "fake" treatment industries
+]
+
+.pull-right[
+
+
+<br/>
+<br/>
+
+
+]
+
+
+---
+
+
+## Placebo Tests
+
+.pull-left[
+<img src="graphs/placebo_industries_3.png" width="400" height = "300">
+
+<br/>
+<br/>
+
+- Use control industries as "fake" treatment industries
+]
+
+.pull-right[
+<img src="graphs/placebo_year_1.png" width="400" height = "300">
+
+<br/>
+<br/>
+
+- Use other years (2013-2017) as "fake" treatment years
+
+]
+
+
+---
+
+## Placebo Tests
+
+.pull-left[
+<img src="graphs/placebo_industries_3.png" width="400" height = "300">
+
+<br/>
+<br/>
+
+- Use control industries as "fake" treatment industries
+]
+
+.pull-right[
+<img src="graphs/placebo_year_2.png" width="400" height = "300">
+
+<br/>
+<br/>
+
+- Use other years (2013-2017) as "fake" treatment years
+
+]
+
+
+---
+
+## Placebo Tests
+
+.pull-left[
+<img src="graphs/placebo_industries_3.png" width="400" height = "300">
+
+<br/>
+<br/>
+
+- Use control industries as "fake" treatment industries
+]
+
+.pull-right[
+<img src="graphs/placebo_year_3.png" width="400" height = "300">
 
 <br/>
 <br/>
@@ -264,14 +384,32 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 
 ## Results
 
+.pull-center[
+<img src="graphs/causal_1.png" width="800" height = "360">
+]
 
 .pull-left[
-<img src="graphs/correlation_causal_trade.png" width="300" height = "300">
+- <span style="color:darkgreen"> **&uarr;** </span> **Recyclable wastes a state exported** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
+]
+
+
+
+
+---
+
+
+
+## Results
+
+.pull-center[
+<img src="graphs/causal_2.png" width="800" height = "360">
+]
+
+.pull-left[
 - <span style="color:darkgreen"> **&uarr;** </span> **Recyclable wastes a state exported** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
 ]
 
 .pull-right[
-<img src="graphs/correlation_causal_violation_rate.png" width="300" height = "300">
 - <span style="color:darkgreen"> **&uarr;** </span> **State-level rate of "significant"  environmental violations** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
 ]
 
