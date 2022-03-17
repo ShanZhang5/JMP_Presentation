@@ -45,13 +45,28 @@ output:
  - Recyclables went to landfills.
 ---
 
+
 ##GS Policy and Trade
 
 .center[**Plastic Scrap Export Volume by Countries**]
 
-<img src="graphs/motivation_new.png" width="800" height = "350">
+<img src="graphs/motivation_1.png" width="800" height = "350">
 .center[UN Comtrade Data]
+
 --
+
+- U.S. plastic scrap exports to China dropped by <span style="color:darkgreen"> **99%**</span>
+
+---
+
+
+
+##GS Policy and Trade
+
+.center[**Plastic Scrap Export Volume by Countries**]
+
+<img src="graphs/motivation_2.png" width="800" height = "350">
+.center[UN Comtrade Data]
 
 - U.S. plastic scrap exports to China dropped by <span style="color:darkgreen"> **99%**</span>
 
