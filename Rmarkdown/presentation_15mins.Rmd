@@ -421,6 +421,20 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 
 ---
 
+## Data Source Comparison
+
+
+.pull-left[<img src="graphs/Calrecycle_EPA.png" width="360" height = "400">
+]
+.pull-right[<img src="graphs/Calrecycle_WBJ.png" width="360" height = "400">
+]
+
+
+
+
+---
+
+
 ## Pollution Relocation
 
 - How does <span style="color:darkgreen">**International Trade policy**</span> affect <span style="color:darkgreen">**pollution relocation**</span>? 
@@ -442,9 +456,9 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
  
  - <span style="color:darkgreen">**Waste flow**</span> - Not In my Backyard (NIMBY) regulations limit interstate waste flows (Ho (2020)).
 
-
- 
 ---
+
+
 
 ## Pollution Relocation
 
@@ -460,6 +474,17 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 
 <img src="graphs/LA_racial_map.png" width="800">
 
+
+---
+
+
+## Pollution Relocation by Racial Composition
+
+
+.pull-left[<img src="graphs/White_tons_plot.png" width="360" height = "400">
+]
+.pull-right[<img src="graphs/Hispanic_tons_plot.png" width="360" height = "400">
+]
 
 ---
 
@@ -560,5 +585,19 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
    
   - After China's GS policy
   
-    Inflows increased more for <span style="color:darkgreen">remote low-income white communities</span>
+    Inflows increased more for <span style="color:darkgreen">remote lower income white communities</span>
    
+---
+
+##Thank you
+
+.pull-center[
+
+<br/>
+<br/>
+
+**Questions?**
+
+szhang6@uoregon.edu]
+
+---
