@@ -232,7 +232,7 @@ $$\hat{Y_{1t}^{N}} = \sum_{j=2}^{J+1} w_{j} Y_{1t}$$
 
 
 
-<img src="graphs/California.png" width="800" height = "350">
+<img src="graphs/California_synthetic_control.png" width="800" height = "350">
 .center[**California**]
 
 - The difference between actual emissions and synthetic emissions is the causal effect of China's GS policy on U.S. landfill methane emissions
@@ -244,7 +244,7 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 ## Placebo Tests
 
 .pull-left[
-<img src="graphs/placebo_industry_1.png" width="400" height = "300">
+<img src="graphs/California_placebo.png" width="400" height = "300">
 
 <br/>
 <br/>
@@ -267,7 +267,7 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 ## Placebo Tests
 
 .pull-left[
-<img src="graphs/placebo_industries_2.png" width="400" height = "300">
+<img src="graphs/California_placebo_1.png" width="400" height = "300">
 
 <br/>
 <br/>
@@ -292,7 +292,7 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 ## Placebo Tests
 
 .pull-left[
-<img src="graphs/placebo_industries_3.png" width="400" height = "300">
+<img src="graphs/California_placebo_2.png" width="400" height = "300">
 
 <br/>
 <br/>
@@ -316,7 +316,7 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 ## Placebo Tests
 
 .pull-left[
-<img src="graphs/placebo_industries_3.png" width="400" height = "300">
+<img src="graphs/California_placebo_2.png" width="400" height = "300">
 
 <br/>
 <br/>
@@ -325,7 +325,7 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 ]
 
 .pull-right[
-<img src="graphs/placebo_year_1.png" width="400" height = "300">
+<img src="graphs/California_year_placebo_1.png" width="400" height = "300">
 
 <br/>
 <br/>
@@ -340,7 +340,7 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 ## Placebo Tests
 
 .pull-left[
-<img src="graphs/placebo_industries_3.png" width="400" height = "300">
+<img src="graphs/California_placebo_2.png" width="400" height = "300">
 
 <br/>
 <br/>
@@ -349,7 +349,7 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 ]
 
 .pull-right[
-<img src="graphs/placebo_year_2.png" width="400" height = "300">
+<img src="graphs/California_year_placebo_2.png" width="400" height = "300">
 
 <br/>
 <br/>
@@ -364,7 +364,7 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 ## Placebo Tests
 
 .pull-left[
-<img src="graphs/placebo_industries_3.png" width="400" height = "300">
+<img src="graphs/California_placebo_2.png" width="400" height = "300">
 
 <br/>
 <br/>
@@ -373,7 +373,7 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 ]
 
 .pull-right[
-<img src="graphs/placebo_year_3.png" width="400" height = "300">
+<img src="graphs/California_year_placebo_3.png" width="400" height = "300">
 
 <br/>
 <br/>
@@ -417,7 +417,38 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 - <span style="color:darkgreen"> **&uarr;** </span> **State-level rate of "significant"  environmental violations** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
 ]
 
+---
 
+## Results
+
+.pull-center[
+<img src="graphs/correlation_election_1.png" width="800" height = "360">
+]
+
+.pull-left[
+- <span style="color:darkgreen"> **&uarr;** </span> **Recyclable wastes a state exported** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
+]
+
+
+
+
+---
+
+
+
+## Results
+
+.pull-center[
+<img src="graphs/correlation_election_2.png" width="800" height = "360">
+]
+
+.pull-left[
+- <span style="color:darkgreen"> **&uarr;** </span> **Recyclable wastes a state exported** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
+]
+
+.pull-right[
+- <span style="color:darkgreen"> **&uarr;** </span> **State-level rate of "significant"  environmental violations** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
+]
 
 ---
 
