@@ -1,5 +1,5 @@
 ---
-title: "Economics of Health and Recycling Policies"
+title: "Causal Inference in the Economics of Recycling Policies and Pollution Relocation"
 subtitle: "University of Oregon"
 author: "Shan Zhang"
 date: "2022/4/22"
@@ -11,6 +11,7 @@ output:
       css: [default, metropolis, metropolis-fonts]
       highlightStyle: github
       countIncrementalSlides: false
+
 ---
 
 ## Chapter 1
@@ -28,50 +29,64 @@ output:
 
 ---
 
+## Motivation
+
+.pull-center[
+![description of the image](graphs/Chapter_0/News_articles.png)]
+.center[**Figure 1.1 News Report about Recycling**]
+
+---
+
+
+## Background
+
+
+In 2015, the U.S. exported **4.5 billion** pounds of scrap plastic for "recycling", over half of which was sold to China.
+
+--
+<br/>
+<br/>
+- In 2017, **China’s Green Sword (GS) Policy** bans the importation of certain types of solid waste and tightens contamination limits for some recyclable materials.
+<br/>
+<br/>
+ - Policy's effect on <span style="color:deeppink">negative-externality export</span>
+<br/>
+<br/>
+ - **Internationally**: pollution haven transition; import control; environmental justice
+<br/>
+<br/>
+ - **Domestically**: landfills and emissions; pollution relocation; environmental discrimination
+ 
+---
+
 ## Roadmap
 
-- Chapter 2 
- -
- -
- -
-
+- **Chapter 2** The Effect of China's Waste Import Ban on International Recycling Market
+<br/>
+<br/>
 --
 
-- Chapter 3
- -
- -
- -
- 
+- <span style="color:deeppink">**Chapter 3**</span> The Effects of China's Waste Import Ban on Pollution Relocation in the U.S. (<span style="color:deeppink">**JMP**</span>)
+<br/>
+<br/>
 --
 
-- Chapter 4
- -
- -
- -
-
+- **Chapter 4** The effect of China's Waste Import Ban on Beach Cleanups (with Rebecca Taylor)
+<br/>
+<br/>
 --
 
-- Chapter 5
- -
- -
- -
+- **Chapter 5** Willingness to Bear the Cost of Preventative Health Policies (with Trudy Ann Cameron)
+<br/>
+<br/>
  
 ---
+
+
+
+
+
 ## Chapter 2
-
-.center[
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-**<font size="5">Willingness to Bear the Cost of Preventative Health Policies<font size="5">**
-]
----
-
-## Chapter 3
 
 .center[
 <br/>
@@ -87,7 +102,140 @@ output:
 ---
 
 
-## Chapter 4
+## U.S. Plastic Scrap Export by Receiving Regions
+China's Green Sword Policy
+- Tightens contamination limits, **February 2013**
+- Bans importation of certain scraps (plastics), announced on **July 2017**
+- Bans, implemented on **January 2018**
+
+--
+
+.pull-center[<img src="graphs/Chapter_2/all_regions.png" width="800" height = "350">
+.center[Fig 2.1 U.S. Plastic Scrap Export Value by Regions]]
+---
+
+
+## U.S. Plastic Scrap Export Value by Receiving Regions
+
+.pull-center[<img src="graphs/Chapter_2/trade_value_by_region.png" width="800" height = "500">]
+.center[Fig 2.2 U.S. Plastic Scrap Export Value]
+---
+
+
+## U.S. Plastic Scrap Export Netweight by Regions
+
+.pull-center[<img src="graphs/Chapter_2/trade_weight_by_region.png" width="800" height = "500">]
+.center[Fig 2.3 U.S. Plastic Scrap Export Netweight]
+
+
+---
+
+## Data
+
+
+---
+
+## Two-way Fixed Effect Regression
+
+$$y_{it} = \alpha+ \beta D_{it}+\gamma X_{it} +\theta Z_{i}+\nu T_{t}+ \delta Z_{i}*T_{t} + \epsilon_{it}$$
+.pull-center[<img src="graphs/Chapter_2/twfe_trade_regions.png" width="800" height = "350">]
+.center[Table 2.1 Policy Effect on Total U.S. Plastic Export Value (Log.U.S. Dollars) across Regions]
+
+---
+
+
+## The Effect of China's GS Policy on U.S. Plastic Scrap Export
+
+**Two-way Fixed Effect Event Study**
+<br/>
+$$y_{it} = \alpha + \sum_{d=-D, d\neq-1}^{D} 1(t-e^{i} = d) \beta_{d} + \gamma X_{it} + \theta Z_{i} + \nu T_{t} + \epsilon_{it}$$
+<br/>
+- <span style="color:darkgreen"> $y_{it}$ </span> is trade value of plastic scrap between the U.S. and region $i$ at time $t$
+<br/>
+<br/>
+- <span style="color:darkgreen"> $1(t-e^{i} = d)$ </span> is an indicator variable for whether the GS policy is $d$ periods away from being enacted
+<br/>
+<br/>
+- <span style="color:darkgreen"> $X_{it}$ </span> is a vector of socioeconomic covariates for region $i$ at time $t$
+<br/>
+<br/>
+- <span style="color:darkgreen"> $Z_{i}$ </span> and <span style="color:darkgreen"> $T_{t}$ </span> are the region and time fixed effects
+---
+
+## Event Study Results
+
+.pull-center[
+![description of the image](graphs/Chapter_2/event_study.png)]
+.center[Fig 2.4 Event Study: U.S. Plastic Scrap Export by Receiving Sub-regions]
+---
+
+
+
+
+
+
+## To Asia: U.S. Plastic Scrap Export Netweight
+
+.pull-center[
+<img src="graphs/Chapter_2/netweight_by_country.png" width="800" height = "450">]
+.center[Fig 2.5 Netweight (million kg) of U.S. Plastic Scrap Export by Receiving countries/regions in Asia]
+---
+
+## To Asia: U.S. Plastic Scrap Export Unit Pirce
+
+.pull-center[<img src="graphs/Chapter_2/unit_price.png" width="800" height = "450">]
+.center[Fig 2.6 Unit Price ($) of U.S. Plastic Scrap Export by Receiving countries/regions in Asia]
+---
+
+
+
+## Machine Learning Counterfactual Method (Burlig et al. 2017)
+.pull-center[<img src="graphs/Chapter_2/machine_learning_counterfactual_boosting.png" width="800" height = "400">]
+.center[Fig 2.7 Machine Learning (Boosting) Counterfactual Trade Value of Plastic Scraps to South/Southeast Asian Countries]
+
+
+---
+
+
+## Import Control Regulations and Policy Efficacy
+
+- **Other Countries imposed similar import control regulation as China (hyperlink to another page)**
+
+.pull-center[.center[<img src="graphs/Chapter_2/Policy_Efficacy.png" width="600" height = "400">]]
+.center[Fig 2.8 Policy Efficacy across South/Southeast Asian Countries]
+---
+
+## Conclusion
+
+- GS policy diverted U.S. recyclable waste exports from China to other developing and underdeveloped countries
+
+--
+
+ - **&darr;** plastic wastes exports to China by 90 percent 
+ <br/>
+ <br/>
+ - **&uarr;** plastic wastes exports to South/Southeast Asia and Central/South America by 150 percent and 41 percent, respectively
+ <br/>
+ <br/>
+ - Individual countries in Southeast Asia have seen significant increases in recyclable wastes imported from the U.S. 
+ <br/>
+ <br/>
+ 
+--
+
+- Other developing countries implemented similar waste import control regulations **&rarr;** Recyclable wastes circulating in the U.S.
+ <br/>
+ <br/>
+--
+
+- Story continues...
+
+
+---
+
+
+
+## Chapter 3
 
 .center[
 <br/>
@@ -136,10 +284,8 @@ output:
 
 ##GS Policy and Trade
 
-.center[**Plastic Scrap Export Volume by Countries**]
-
 <img src="graphs/motivation_1.png" width="800" height = "350">
-.center[UN Comtrade Data]
+.center[Fig 3.1 Plastic Scrap Export Volume by Countries (UN Comtrade Data)]
 
 --
 
@@ -154,7 +300,7 @@ output:
 .center[**Plastic Scrap Export Volume by Countries**]
 
 <img src="graphs/motivation_2.png" width="800" height = "350">
-.center[UN Comtrade Data]
+.center[Fig 3.1 Plastic Scrap Export Volume by Countries (UN Comtrade Data)]
 
 - U.S. plastic scrap exports to China dropped by <span style="color:darkgreen"> **99%**</span>
 
@@ -226,7 +372,7 @@ output:
 .pull-left[ 
 <img src="graphs/methane_emissions_pinpoint.png" width="500" height = "200">
 <img src="graphs/methane_emission_Canada.png" width="500" height = "200">
-.center[GHGSat’s satellite showed methane from landfills (upper: Buenos Aires, Argentina. lower: Alberta, Canada)]
+.center[Fig 3.2 GHGSat’s satellite showed methane from landfills (upper: Buenos Aires, Argentina. lower: Alberta, Canada)]
 ]
 
 
@@ -317,11 +463,8 @@ $$\hat{Y_{1t}^{N}} = \sum_{j=2}^{J+1} w_{j} Y_{1t}$$
 
 ## Results
 
-
-
-
 <img src="graphs/California_synthetic_control.png" width="800" height = "350">
-.center[**California**]
+.center[Fig 3.3 California Waste Industry Emission Synthetic Control]
 
 - The difference between actual emissions and synthetic emissions is the causal effect of China's GS policy on U.S. landfill methane emissions
 
@@ -331,22 +474,9 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
  
 ## Placebo Tests
 
-.pull-left[
-<img src="graphs/California_placebo.png" width="400" height = "300">
-
-<br/>
-<br/>
-
-- Use control industries as "fake" treatment industries
-]
-
-.pull-right[
-
-<br/>
-<br/>
-
-
-
+.pull-center[
+<img src="graphs/California_placebo.png" width="700" height = "450">
+.center[Fig 3.4 Placebo Test using "Fake" Treatment Industries]
 ]
 
 
@@ -354,23 +484,9 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 
 ## Placebo Tests
 
-.pull-left[
-<img src="graphs/California_placebo_1.png" width="400" height = "300">
-
-<br/>
-<br/>
-
-- Use control industries as "fake" treatment industries
-]
-
-.pull-right[
-
-
-<br/>
-<br/>
-
-
-
+.pull-center[
+<img src="graphs/California_placebo_1.png" width="700" height = "450">
+.center[Fig 3.4 Placebo Test using "Fake" Treatment Industries]
 ]
 
 
@@ -379,105 +495,84 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 
 ## Placebo Tests
 
-.pull-left[
-<img src="graphs/California_placebo_2.png" width="400" height = "300">
-
-<br/>
-<br/>
-
-- Use control industries as "fake" treatment industries
+.pull-center[
+<img src="graphs/California_placebo_2.png" width="700" height = "450">
+.center[Fig 3.4 Placebo Test using "Fake" Treatment Industries]
 ]
 
-.pull-right[
-
-
-<br/>
-<br/>
-
-
-]
 
 
 ---
 
 
-## Placebo Tests
+
+## Results
+.center[Fig 3.5 Correlations of State-level Causal Estimates by Significancy]
+.pull-center[
+<img src="graphs/correlation_1.png" width="800" height = "330">
+]
 
 .pull-left[
-<img src="graphs/California_placebo_2.png" width="400" height = "300">
-
-<br/>
-<br/>
-
-- Use control industries as "fake" treatment industries
+- <span style="color:darkgreen"> **&uarr;** </span> **Recyclable wastes a state exported** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
 ]
 
-.pull-right[
-<img src="graphs/California_year_placebo_1.png" width="400" height = "300">
 
-<br/>
-<br/>
-
-- Use other years (2013-2017) as "fake" treatment years
-
-]
 
 
 ---
 
-## Placebo Tests
+## Results
+.center[Fig 3.5 Correlations of State-level Causal Estimates by Significancy]
+.pull-center[
+<img src="graphs/correlation_2.png" width="800" height = "330">
+]
 
 .pull-left[
-<img src="graphs/California_placebo_2.png" width="400" height = "300">
-
-<br/>
-<br/>
-
-- Use control industries as "fake" treatment industries
+- <span style="color:darkgreen"> **&uarr;** </span> **Recyclable wastes a state exported** &rarr; <span style="color:darkgreen"> **&uarr;** </span> percentage increase in methane emissions.
 ]
 
 .pull-right[
-<img src="graphs/California_year_placebo_2.png" width="400" height = "300">
-
-<br/>
-<br/>
-
-- Use other years (2013-2017) as "fake" treatment years
-
+- <span style="color:darkgreen"> **&uarr;** </span> **State-level rate of "significant"  environmental violations** &rarr; <span style="color:darkgreen"> **&uarr;** </span> percentage increase in methane emissions.
 ]
-
 
 ---
 
-## Placebo Tests
+## Results
+.center[Fig 3.6 Correlations of State-level Emission Net Change]
+.pull-center[
+<img src="graphs/netchange_correlation_1.png" width="800" height = "330">
+]
 
 .pull-left[
-<img src="graphs/California_placebo_2.png" width="400" height = "300">
-
-<br/>
-<br/>
-
-- Use control industries as "fake" treatment industries
+- <span style="color:darkgreen"> **&uarr;** </span> **Recyclable wastes a state exported** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
 ]
 
-.pull-right[
-<img src="graphs/California_year_placebo_3.png" width="400" height = "300">
 
-<br/>
-<br/>
-
-- Use other years (2013-2017) as "fake" treatment years
-
-]
 
 
 ---
 
 
 ## Results
-
+.center[Fig 3.6 Correlations of State-level Emission Net Change]
 .pull-center[
-<img src="graphs/correlation_1.png" width="800" height = "360">
+<img src="graphs/netchange_correlation_2.png" width="800" height = "330">
+]
+
+.pull-left[
+- <span style="color:darkgreen"> **&uarr;** </span> **Recyclable wastes a state exported** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
+]
+
+.pull-right[
+- <span style="color:darkgreen"> **&uarr;** </span> **State-level rate of "significant"  environmental violations** &rarr; <span style="color:darkgreen"> **&uarr;** </span> decrease in methane emissions.
+]
+
+---
+
+## Results
+.center[Fig 3.7 Correlations of State-level Causal Estimates by Political Affiliation]
+.pull-center[
+<img src="graphs/correlation_election_1.png" width="800" height = "330">
 ]
 
 .pull-left[
@@ -492,42 +587,9 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 
 
 ## Results
-
+.center[Fig 3.7 Correlations of State-level Causal Estimates by Political Affiliation]
 .pull-center[
-<img src="graphs/correlation_2.png" width="800" height = "360">
-]
-
-.pull-left[
-- <span style="color:darkgreen"> **&uarr;** </span> **Recyclable wastes a state exported** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
-]
-
-.pull-right[
-- <span style="color:darkgreen"> **&uarr;** </span> **State-level rate of "significant"  environmental violations** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
-]
-
----
-
-## Results
-
-.pull-center[
-<img src="graphs/correlation_election_1.png" width="800" height = "360">
-]
-
-.pull-left[
-- <span style="color:darkgreen"> **&uarr;** </span> **Recyclable wastes a state exported** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
-]
-
-
-
-
----
-
-
-
-## Results
-
-.pull-center[
-<img src="graphs/correlation_election_2.png" width="800" height = "360">
+<img src="graphs/correlation_election_2.png" width="800" height = "330">
 ]
 
 .pull-left[
@@ -543,12 +605,12 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 ## Data Source Comparison
 
 
-.pull-left[<img src="graphs/Calrecycle_EPA.png" width="360" height = "400">
+.pull-left[<img src="graphs/Calrecycle_EPA.png" width="400" height = "360">
 ]
-.pull-right[<img src="graphs/Calrecycle_WBJ.png" width="360" height = "400">
+.pull-right[<img src="graphs/Calrecycle_WBJ.png" width="400" height = "360">
 ]
 
-
+.center[Fig 3.8 Data Comparison between CalRecycle, EPA and WBJ]
 
 
 ---
@@ -581,34 +643,52 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 
 ## Pollution Relocation
 
-.center[**Average net increase in waste flows across regions after the GS policy**]
+
 
 <img src="graphs/four_counties.png" width="800" height = "450">
-
+.center[Fig 3.8 Average net increase in waste flows across regions after the GS policy]
 
 ---
 
 ## Pollution Relocation by Racial Composition
 
 
-<img src="graphs/LA_racial_map.png" width="800">
+.pull-center[.center[<img src="graphs/LA_racial_map.png" width="600" height = "450">]]
 
 
+.center[Fig 3.9 Average net increase in waste flows across regions after the GS policy] 
 ---
 
 
 ## Pollution Relocation by Racial Composition
+.pull-left[<img src="graphs/LA_racial_map.png" width="600" height = "400">]
+.pull-right[<img src="graphs/racial_disposal_plot.png" width="300" height = "400">]
+<br/>
+.center[
+Fig 3.9 Average net increase in waste flows across regions after the GS policy
+]
+---
 
 
-.pull-left[<img src="graphs/White_tons_plot.png" width="360" height = "400">
+
+
+## Pollution Relocation by Racial Composition (Appendix)
+
+
+.pull-left[<img src="graphs/White_tons_plot.png" width="360" height = "360">
 ]
-.pull-right[<img src="graphs/Hispanic_tons_plot.png" width="360" height = "400">
+.pull-right[<img src="graphs/Hispanic_tons_plot.png" width="360" height = "360">
 ]
+
+
+.center[Fig A.3.1 Average net increase in waste flows after the GS policy and Regional Racial Composition]
+
+
 
 ---
 
 
-## Economies of Scale or Vertical Integration
+## Economies of Scale or Vertical Integration (Appendix)
 
 
 .pull-left[
@@ -618,11 +698,11 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 .pull-right[
 ![](graphs/all_facilities_WBJ.png)
 ]
-.center[**Data Source: CalRecycle and Waste Business Journal (WBJ)**]
+.center[Fig A.3.2 Data Source: CalRecycle and Waste Business Journal (WBJ)]
 ---
 
 
-## Economies of Scale or Vertical Integration
+## Economies of Scale or Vertical Integration (Appendix)
 
 - Other facilities within <span style="color:darkgreen">**15km Buffer**</span> of the destination facility
 .pull-left[
@@ -632,7 +712,7 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 .pull-right[
 ![](graphs/San_Joaquin_Economies_of_Scale_map.png)
 ]
-.center[**Data Source : CalRecycle and WBJ**]
+.center[Fig A.3.3 Data Source : CalRecycle and WBJ]
 ---
 
 
@@ -675,28 +755,28 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 
 .pull-center[
 ![description of the image](graphs/result_bp_1.png)]
-.center[**Gravity Model Estimates at Census Block level**]
+.center[Fig 3.10 **Gravity Model Estimates at Census Block level**]
 ---
 
 ## Results prior to the GS Policy
 
 .pull-center[
 ![description of the image](graphs/result_bp_2.png)]
-.center[**Gravity Model Estimates at Census Block level**]
+.center[Fig 3.10 **Gravity Model Estimates at Census Block level**]
 ---
 
 ## Results prior to the GS Policy
 
 .pull-center[
 ![description of the image](graphs/result_bp_3.png)]
-.center[**Gravity Model Estimates at Census Block level**]
+.center[Fig 3.10 **Gravity Model Estimates at Census Block level**]
 ---
 
 ## Results after the GS Policy
 
 .pull-center[
 ![description of the image](graphs/result_ap_1.png)]
-.center[**Gravity Model Estimates at Census Block level**]
+.center[Fig 3.11 **Gravity Model Estimates at Census Block level**]
 
 ---
 
@@ -704,7 +784,7 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 
 .pull-center[
 ![description of the image](graphs/result_ap_2.png)]
-.center[**Gravity Model Estimates at Census Block level**]
+.center[Fig 3.11 **Gravity Model Estimates at Census Block level**]
 
 ---
 
@@ -712,7 +792,99 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 
 .pull-center[
 ![description of the image](graphs/result_ap_3.png)]
-.center[**Gravity Model Estimates at Census Block level**]
+.center[Fig 3.11 **Gravity Model Estimates at Census Block level**]
+---
+
+
+## Results prior to the GS Policy with s.d. Clusters
+
+.pull-center[
+<img src="graphs/sd_clustered_bp_1.png" width="800" height = "400">
+]
+.center[Fig 3.12 **Gravity Model Estimates at Census Block level**]
+---
+
+## Results prior to the GS Policy with s.d. Clusters
+
+.pull-center[
+<img src="graphs/sd_clustered_bp_2.png" width="800" height = "400">
+]
+.center[Fig 3.12 **Gravity Model Estimates at Census Block level**]
+---
+
+## Results prior to the GS Policy with s.d. Clusters
+
+.pull-center[
+<img src="graphs/sd_clustered_bp_3.png" width="800" height = "400">
+]
+.center[Fig 3.12 **Gravity Model Estimates at Census Block level**]
+---
+
+## Results prior to the GS Policy with s.d. Clusters
+
+.pull-center[
+<img src="graphs/sd_clustered_bp_4.png" width="800" height = "400">
+]
+.center[Fig 3.12 **Gravity Model Estimates at Census Block level**]
+---
+
+## Results after the GS Policy with s.d. Clusters
+
+.pull-center[
+<img src="graphs/sd_clustered_ap_1.png" width="800" height = "400">]
+.center[Fig 3.13 **Gravity Model Estimates at Census Block level**]
+
+---
+
+## Results after the GS Policy with s.d. Clusters
+
+.pull-center[
+<img src="graphs/sd_clustered_ap_2.png" width="800" height = "400">]
+.center[Fig 3.13 **Gravity Model Estimates at Census Block level**]
+
+---
+
+## Results after the GS Policy with s.d. Clusters
+
+.pull-center[
+<img src="graphs/sd_clustered_ap_3.png" width="800" height = "400">]
+.center[Fig 3.13 **Gravity Model Estimates at Census Block level**]
+---
+
+## Results after the GS Policy with s.d. Clusters
+
+.pull-center[
+<img src="graphs/sd_clustered_ap_4.png" width="800" height = "400">]
+.center[Fig 3.13 **Gravity Model Estimates at Census Block level**]
+---
+
+
+## Mechanism -- Political Costs
+- After the exogenous policy shock, marginal transportation costs relatively low
+- Total Tons of Disposal of <span style="color:darkgreen">the destination facility</span> by political distance from **the state average vote**
+ - Political distance = county average vote - state average vote
+- The most democratic and republican counties have the lowest political costs
+<br/>
+
+--
+
+.pull-left[
+<img src="graphs/Political_distance_ofc_rd_pre.png" width="400" height = "220">
+.center[**Before China's GS Policy**]]
+
+.pull-right[
+<img src="graphs/Political_distance_ofc_rd_post.png" width="400" height = "200">
+.center[**After China's GS Policy**]]
+.center[Fig 3.14 Log of total tons of disposal received and political distance from the state average]
+---
+
+
+## Mechanism -- Political Costs
+
+.pull-center[
+<img src="graphs/Political_distance_ofc_rd_all_time.png" width="800" height = "400">]
+.center[Fig 3.15 Log of total tons of disposal received and political distance from the state average]
+.pull-right[<font size="2"> Data Source: CalRecycle and MIT Election Data </span>]
 ---
 
 ## Conclusion Preliminary Findings
@@ -735,7 +907,66 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
   
     Inflows increased more for <span style="color:darkgreen">remote lower income white communities</span>
    
+   - Potential mechanism 
+   
+   waste relocated to places where have <span style="color:darkgreen">lower political costs</span> 
 ---
+
+## Chapter 4
+
+.center[
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+**<font size="5">The effect of China's Waste Import Ban on Beach Cleanups<font size="5">**
+]
+
+---
+
+## Introduction
+
+- China's GS Policy diverted developed countries recyclable waste exports from China to other developing and underdeveloped countries
+
+- 
+
+- 
+
+---
+
+## Export Countries' Beach Cleanups
+
+.pull-center[
+![description of the image](graphs/Chapter_4/Trade_and_beach_cleanup_exporters.png)]
+.center[Fig 4.1]
+---
+
+
+## Import Countries' Beach Cleanups
+
+.pull-center[
+![description of the image](graphs/Chapter_4/Trade_and_beach_cleanup_importers_and_china.png)]
+.center[Fig 4.2]
+---
+
+
+## Import Countries' Beach Cleanups
+
+.pull-center[
+![description of the image](graphs/Chapter_4/Trade_and_beach_cleanup_importers.png)]
+.center[Fig 4.3]
+---
+
+## U.S. States Beach Cleanups
+
+.pull-center[
+![description of the image](graphs/Chapter_4/Trade_beach_cleanup_US_states.png)]
+.center[Fig 4.4]
+---
+
 
 ## Chapter 5
 
@@ -747,12 +978,44 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 <br/>
 <br/>
 
-**<font size="5">The effect of China's Waste Import Ban on Beach Cleanups<font size="5">**
-
+**<font size="5">Willingness to Bear the Cost of Preventative Health Policies<font size="5">**
 ]
---- 
+---
+
+
+## Public Health Policy Survey in 2003
+
+.pull-center[
+![description of the image](graphs/Chapter_1/Prevention_survey.png)]
+.center[Fig 5.1]
+---
+
+## Survey Respondents
+
+.pull-center[
+![description of the image](graphs/Chapter_1/respondents_newscale.png)]
+.center[Fig 5.2]
+---
+
+## Covid-19 Pandemic
+
+.pull-center[
+![description of the image](graphs/Chapter_1/lasso_l1r1d1f0p1s0_nationalcasesdeaths.png)]
+.center[Fig 5.3]
+---
+
+## Covid-19 Pandemic
+
+.pull-left[
+![description of the image](graphs/Chapter_1/lasso_wtp_each_month_2020qtrs_2x2_ben99.png)]
+.center[Fig 5.4]
+
+.pull-right[
+![description of the image](graphs/Chapter_1/lasso_wtp_each_month_2021qtrs_2x2_ben99.png)]
+.center[Fig 5.5]
 
 ---
+
 
 ##Thank you
 
