@@ -1280,7 +1280,7 @@ University of Oregon]
 ![description of the image](graphs/result_ap_3.png)]
 .center[Fig 3.5 **Gravity Model Estimates at Census Block level**]
 
----
+
 
 
 
