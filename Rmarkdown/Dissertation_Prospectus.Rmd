@@ -1071,7 +1071,7 @@ $$y_{it} = \alpha+ \beta_{1} D_{t}+ \beta_{2} T_{i} + \beta_{3}  D_{t}*T_{i} + \
 ## WTP to avoid cases and deaths
 
 .pull-center[
-<img src="graphs/Chapter_1/wtp_mo_cap_12_2021.png" width="800" height = "350">]
+<img src="graphs/Chapter_1/WTP_mo_cap_12_2021.png" width="800" height = "350">]
 
 .center[Fig 5.5 December 2021 WTP to avoid COVID cases and deaths]
 
