@@ -49,7 +49,7 @@ In 2015, the U.S. exported **4.5 billion** pounds of scrap plastic for "recyclin
 - In 2017, **China’s Green Sword (GS) Policy** bans the importation of certain types of solid waste and tightens contamination limits for some recyclable materials.
 <br/>
 <br/>
- - Policy's effect on <span style="color:deeppink">negative-externality export</span>
+ - Policy's effect on <span style="color:darkgreen">negative-externality export</span>
 <br/>
 <br/>
  - **Internationally**: pollution haven transition; import control; environmental justice
@@ -137,18 +137,18 @@ China's Green Sword Policy
 
 ## Data
 
-- <span style="color:deeppink">**UN Comtrade Data**</span>
+- <span style="color:deeppink">UN Comtrade Data</span>
 
  - Worldwide monthly scrap import and export by types of materials and country pairs from 2002 to 2020
  
 --
 
-- <span style="color:deeppink">**CEPII Gravity Data**</span>
+- <span style="color:deeppink">CEPII Gravity Data</span>
  - Geographical distance, trade facilitation measures, proxies for cultural proximity, macroeconomic indicators, estimated unit price of scrap material (CIF and FOB)
 
 --
 
-- <span style="color:deeppink">**IMF, World Bank, FRED Data**</span>
+- <span style="color:deeppink">IMF, World Bank, FRED Data</span>
  - Monthly exchange rate, oil price, commodity terms of trade, and manufacturing add value (%GDP)
 ---
 
@@ -311,8 +311,6 @@ $$y_{it} = \alpha + \sum_{d=-D, d\neq-1}^{D} 1(t-e^{i} = d) \beta_{d} + \gamma X
 
 
 ##GS Policy and Trade
-
-.center[**Plastic Scrap Export Volume by Countries**]
 
 <img src="graphs/motivation_2.png" width="800" height = "350">
 .center[Fig 3.1 Plastic Scrap Export Volume by Countries (UN Comtrade Data)]
@@ -613,6 +611,10 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 --
  
  - <span style="color:darkgreen">**Waste flow**</span> - Not In my Backyard (NIMBY) regulations limit interstate waste flows (Ho (2020)).
+ 
+--
+
+ - Transition to CalRecycle Data
 
 ---
 
@@ -652,7 +654,7 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 
 ## Pollution Relocation by Racial Composition
 .pull-left[<img src="graphs/LA_racial_map.png" width="600" height = "400">]
-.pull-right[<img src="graphs/racial_disposal_plot.png" width="300" height = "400">]
+.pull-right[<img src="graphs/percentage_of_minority_population.png" width="300" height = "400">]
 <br/>
 .center[
 Fig 3.9 Average net increase in waste flows across regions after the GS policy
@@ -704,8 +706,8 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 
 ## Variables of Interest
 .pull-left[
-<font size="3">
-Main variables
+<font size="3.5">
+<span style="color:darkgreen">Main variables</span>
 
 - $R_{jt}$  **racial compositions (percentage)**
 
@@ -716,17 +718,19 @@ Main variables
 
 
 - $Dist_{ij}$ **distance between origin and destination** 
+
  - CalRecycle data
  - population centroid coordinates of the origin jurisdictions
  - coordinates of destination facilities
+ - time variant, spatial variant
 
 ]
 
 --
 
 .pull-right[
-<font size="3">
-Within $X_{jt}$ 
+<font size="3.5">
+<span style="color:darkgreen">Within $X_{jt}$ </span>
 
 - **Median income**
 
@@ -736,12 +740,14 @@ Within $X_{jt}$
 
  
 - **Regulation of environmental stringency**
+
  - EPA Compliance History Data
  - time invariant
  
 
  
 - **Economies of scale** 
+
  - Waste Business Journal (industrial data)
  - Spatial definition: See appendix Fig A 3.3 and Fig A 3.4
  - time invariant, spatial variant
@@ -752,7 +758,7 @@ Within $X_{jt}$
 
 
 
-.pull-left[<font size="3">
+.pull-left[<font size="3.5">
 <br/>
 <br/>
  - **Interactions of above variables with the policy dummy variable**
@@ -845,13 +851,7 @@ Within $X_{jt}$
 ---
 
 
-## Mechanism -- Political Costs
 
-.pull-center[
-<img src="graphs/Political_distance_ofc_rd_all_time.png" width="800" height = "400">]
-.center[Fig 3.15 Log of total tons of disposal received and political distance from the state average]
-.pull-right[<font size="2"> Data Source: CalRecycle and MIT Election Data </span>]
----
 
 ## Conclusion Preliminary Findings
 
@@ -921,7 +921,7 @@ Within $X_{jt}$
 
 ## Data - Center for Marine Conservation
 
-- <span style="color:deeppink">**International Coastal Cleanup Data**</span> 
+- <span style="color:deeppink">International Coastal Cleanup Data</span> 
 
  - 1990 to current
  - by year and by country
@@ -930,7 +930,7 @@ Within $X_{jt}$
  
 --
  
-- <span style="color:deeppink">**U.S. Coastal Cleanup Data**</span>
+- <span style="color:deeppink">U.S. Coastal Cleanup Data</span>
 
  - 1990 to current
  - by year and by state
@@ -939,7 +939,7 @@ Within $X_{jt}$
 
 --
  
-- <span style="color:deeppink">**New U.S. Coastal Cleanup Data (through Online Application)**</span>
+- <span style="color:deeppink">New U.S. Coastal Cleanup Data (through Online Application)</span>
  
  - 2015 to current
  - by date, state, and geographic coordinates
@@ -1120,7 +1120,11 @@ $$y_{it} = \alpha+ \beta_{1} D_{t}+ \beta_{2} T_{i} + \beta_{3}  D_{t}*T_{i} + \
 
 ## Roadmap
 
+.pull-center[
+.center[
+<img src="graphs/Chapter_5/Dissertation_plans.png" width="800" height = "450">]]
 
+.center[Fig 6.1 Dissertation Plans]
 ---
 
 ##Thank you
@@ -1281,6 +1285,12 @@ University of Oregon]
 .center[Fig 3.5 **Gravity Model Estimates at Census Block level**]
 
 
+## Mechanism -- Political Costs (Appendix)
+
+.pull-center[
+<img src="graphs/Political_distance_ofc_rd_all_time.png" width="800" height = "400">]
+.center[Fig 3.15 Log of total tons of disposal received and political distance from the state average]
+.pull-right[<font size="2"> Data Source: CalRecycle and MIT Election Data </span>]
 
 
 
