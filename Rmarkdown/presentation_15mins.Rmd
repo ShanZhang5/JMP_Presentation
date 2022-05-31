@@ -1,8 +1,8 @@
 ---
 title: "The Effects of China's Waste Import Ban on Pollution Relocation in the U.S."
-subtitle: "University of Oregon"
-author: "Shan Zhang"
-date: "2022/3/4"
+subtitle: "Shan Zhang, University of Oregon"
+author: "AERE Summer Conference"
+date: "2022/6/1"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -84,8 +84,9 @@ output:
 
  - What has been the effect of China's GS policy on <span style="color:darkgreen"> **Domestic Emissions**</span> from landfill facilities? 
 
-<br/>
-<br/>
+--
+
+ - What are the key features of states that drive <span style="color:darkgreen">**Heterogeneous Changes**</span> in domestic emissions?
 
 --
 
@@ -93,7 +94,10 @@ output:
 - For the state of **California**
 
  - What are the <span style="color:darkgreen">**Distributional Effects**</span> of the GS policy on pollution relocation for local communities at census block levels? 
- - What are <span style="color:darkgreen">**Environmental Justice (EJ)**</span> implications?
+
+--
+
+ - What are <span style="color:darkgreen">**Environmental Justice (EJ)**</span> implications? What's the mechanism behind?
 
 
 ---
@@ -133,27 +137,7 @@ output:
 
 ---
 
-## Environmental Outcome Measurement
 
-.pull-left[ 
-<img src="graphs/methane_emissions_pinpoint.png" width="500" height = "200">
-<img src="graphs/methane_emission_Canada.png" width="500" height = "200">
-.center[GHGSat’s satellite showed methane from landfills (upper: Buenos Aires, Argentina. lower: Alberta, Canada)]
-]
-
-
-.pull-right[ 
-- Why use <span style="color:darkgreen"> **methane**</span> emissions?
-
- - They are a **proxy** for general pollution emissions
- 
- - Methane is far more potent at trapping the sun’s heat than carbon emissions
- 
- - Satellite data is available only from 2020
- 
- - Need consistently measured emissions data from 2010 to 2020
-]
----
    
 ## Data
 - [U.S. EPA Greenhouse Gas Reporting Program (GHGRP)](https://www.epa.gov/ghgreporting)
@@ -196,6 +180,7 @@ output:
  - EPA Enforcement and Compliance Historical data
  - Bureau and Labor and Statistics (BLS) Quarterly Employment and Wages at county level
  - U.S. Census racial mix, median income at census-block level
+ - Statewide Database (SWDB) election data at precinct level
   
 ---
 
@@ -243,160 +228,10 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
  
 ## Placebo Tests
 
-.pull-left[
-<img src="graphs/California_placebo.png" width="400" height = "300">
-
-<br/>
-<br/>
-
-- Use control industries as "fake" treatment industries
-]
-
-.pull-right[
-
-<br/>
-<br/>
-
-
-
-]
-
-
----
-
-## Placebo Tests
-
-.pull-left[
-<img src="graphs/California_placebo_1.png" width="400" height = "300">
-
-<br/>
-<br/>
-
-- Use control industries as "fake" treatment industries
-]
-
-.pull-right[
-
-
-<br/>
-<br/>
-
-
-
-]
-
-
----
-
-
-## Placebo Tests
-
-.pull-left[
-<img src="graphs/California_placebo_2.png" width="400" height = "300">
-
-<br/>
-<br/>
-
-- Use control industries as "fake" treatment industries
-]
-
-.pull-right[
-
-
-<br/>
-<br/>
-
-
-]
-
-
----
-
-
-## Placebo Tests
-
-.pull-left[
-<img src="graphs/California_placebo_2.png" width="400" height = "300">
-
-<br/>
-<br/>
-
-- Use control industries as "fake" treatment industries
-]
-
-.pull-right[
-<img src="graphs/California_year_placebo_1.png" width="400" height = "300">
-
-<br/>
-<br/>
-
-- Use other years (2013-2017) as "fake" treatment years
-
-]
-
-
----
-
-## Placebo Tests
-
-.pull-left[
-<img src="graphs/California_placebo_2.png" width="400" height = "300">
-
-<br/>
-<br/>
-
-- Use control industries as "fake" treatment industries
-]
-
-.pull-right[
-<img src="graphs/California_year_placebo_2.png" width="400" height = "300">
-
-<br/>
-<br/>
-
-- Use other years (2013-2017) as "fake" treatment years
-
-]
-
-
----
-
-## Placebo Tests
-
-.pull-left[
-<img src="graphs/California_placebo_2.png" width="400" height = "300">
-
-<br/>
-<br/>
-
-- Use control industries as "fake" treatment industries
-]
-
-.pull-right[
-<img src="graphs/California_year_placebo_3.png" width="400" height = "300">
-
-<br/>
-<br/>
-
-- Use other years (2013-2017) as "fake" treatment years
-
-]
-
-
----
-
-
-## Results
-
 .pull-center[
-<img src="graphs/correlation_1.png" width="800" height = "360">
+<img src="graphs/California_placebo.png" width="700" height = "450">
+.center[**Placebo Test using "Fake" Treatment Industries**]
 ]
-
-.pull-left[
-- <span style="color:darkgreen"> **&uarr;** </span> **Recyclable wastes a state exported** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
-]
-
-
 
 
 ---
@@ -404,89 +239,53 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 
 
 ## Results
+.center[**Correlations of State-level Emission Net Change**]
+.pull-center[
+<img src="graphs/trade_correlation.png" width="700" height = "400">
+]
 
 .pull-center[
-<img src="graphs/correlation_2.png" width="800" height = "360">
-]
-
-.pull-left[
-- <span style="color:darkgreen"> **&uarr;** </span> **Recyclable wastes a state exported** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
-]
-
-.pull-right[
-- <span style="color:darkgreen"> **&uarr;** </span> **State-level rate of "significant"  environmental violations** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
-]
-
----
-
-## Results
-
-.pull-center[
-<img src="graphs/correlation_election_1.png" width="800" height = "360">
-]
-
-.pull-left[
 - <span style="color:darkgreen"> **&uarr;** </span> **Recyclable wastes a state exported** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
 ]
 
 
 
 
----
 
+
+---
 
 
 ## Results
+.center[Fig.7 **Correlations of State-level Emission Net Change**]
+.pull-center[
+<img src="graphs/violation_correlation.png" width="700" height = "400">
+]
 
 .pull-center[
-<img src="graphs/correlation_election_2.png" width="800" height = "360">
-]
-
-.pull-left[
-- <span style="color:darkgreen"> **&uarr;** </span> **Recyclable wastes a state exported** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
-]
-
-.pull-right[
-- <span style="color:darkgreen"> **&uarr;** </span> **State-level rate of "significant"  environmental violations** &rarr; <span style="color:darkgreen"> **&uarr;** </span> increase in methane emissions.
+- <span style="color:darkgreen"> **&uarr;** </span> **State-level rate of "significant"  environmental violations** &rarr; <span style="color:darkgreen"> **&darr;** </span> increase in methane emissions.
 ]
 
 ---
 
-## Data Source Comparison
-
-
-.pull-left[<img src="graphs/Calrecycle_EPA.png" width="360" height = "400">
-]
-.pull-right[<img src="graphs/Calrecycle_WBJ.png" width="360" height = "400">
-]
 
 
 
 
----
 
+## 
 
-## Pollution Relocation
-
-- How does <span style="color:darkgreen">**International Trade policy**</span> affect <span style="color:darkgreen">**pollution relocation**</span>? 
-
---
-
-- Does pollution relocate? 
- - **Cap and Trade** - Clean Air Act requires new or expanding plants to pay incumbents in the same or neighboring counties to reduce their pollution emissions (Shapiro and Walker (2021)).
- 
---
- 
- - **US air pollution offset markets** - Clean Air Act allows for trading of permanent pollution emissions rights between firms within a metropolitan area (Shapiro and Walker (2020)).
- 
---
-
- - **Externality-export strategy for air pollution** - Clean Air Act (Morehouse and Rubin (2022))
-
---
- 
- - <span style="color:darkgreen">**Waste flow**</span> - Not In my Backyard (NIMBY) regulations limit interstate waste flows (Ho (2020)).
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<font size="6">
+.pull-center[**Pollution Relocation in California and Environmental Justice**]
+<br/>
+<br/>
+<br/>
 ---
 
 
@@ -510,13 +309,10 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 
 
 ## Pollution Relocation by Racial Composition
-
-
-.pull-left[<img src="graphs/White_tons_plot.png" width="360" height = "400">
+.pull-center[<img src="graphs/percentage_of_minority_population.png" width="600" height = "450">]
+<br/>
+.center[**Average net increase in waste flows across regions after the GS policy**
 ]
-.pull-right[<img src="graphs/Hispanic_tons_plot.png" width="360" height = "400">
-]
-
 ---
 
 ## Gravity-type Model 
@@ -554,107 +350,164 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 
 
 ---
-## Results prior to the GS Policy
 
-.pull-center[
-![description of the image](graphs/result_bp_1.png)]
-.center[**Gravity Model Estimates at Census Block level**]
----
+
+
 
 ## Results prior to the GS Policy
 
 .pull-center[
-![description of the image](graphs/result_bp_2.png)]
+.center[<img src="graphs/estimate_bp.png" width="450" height = "490">]
+]
 .center[**Gravity Model Estimates at Census Block level**]
 ---
 
-## Results prior to the GS Policy
-
-.pull-center[
-![description of the image](graphs/result_bp_3.png)]
-.center[**Gravity Model Estimates at Census Block level**]
----
 
 ## Results after the GS Policy
 
 .pull-center[
-![description of the image](graphs/result_ap_1.png)]
+.center[<img src="graphs/estimate_ap.png" width="450" height = "490">]]
 .center[**Gravity Model Estimates at Census Block level**]
 
 ---
 
-## Results after the GS Policy
+
+
+## Preliminary Results
+
+**California Pollution Relocation** 
+
+- Before China's GS policy
+  
+  - Waste tend to relocate to <span style="color:darkgreen">**minority communities**</span>
+
+--
+
+- After China's GS policy
+  
+ - Inflows increased more for <span style="color:darkgreen">** lower-income white communities**</span>
+ 
+--
+
+- Counterintuitive?
+    
+---
+
+
+## Mechanism -- Political Costs
+
+- Racial composition of the destination community is highly correlated with political votes
+
+.center[<img src="graphs/political_race.png" width="400" height = "250">]
+
+.center[**Correlation between White percentage by blocks and Republican votes by precinct**]
+
+--
+
+- Higher Republican votes, higher percentage of White population in the community
+
+--
+
+- Does disposal flow increase more in Republican communities due to political costs?
+<br/>
+
+
+---
+
+
+## Pollution Relocation and Political Costs: Simple model
+<font size="3"> 
+- Pollution relocation depends on **transportation costs** and **political costs**
+$$Y_{ij} = \frac{\overline Y_{i}}{C_{ij}(d_{ij}\cdot f_{ij})\cdot P_{ij}(V{jc})}$$
+ - $Y_{ij}$ is pollution relocated from jurisdiction $i$ to facility $j$
+ - $\overline Y_{i}$ is the waste pollution generated by jurisdiction $i$
+ - $C_{ij}(d_{ij}\cdot f_{ij})$ is a transportation cost function w.r.t distance (overseas/domestic) and fuel price per mile
+ - $P_{ij}(V{jc})$ is a political cost function w.r.t. votes in district where facility $j$ located
+
+--
+
+- Political costs depend on the distance between precinct(destination) votes and state-incumbent votes
+$$V{jc} = v_{j} - \overline v_{c}$$
+ - $v_{j}$ is the votes of the district
+ - $v_{c}$ is California's incumbent votes
+ - $V_{jc}$ is the political cost of the destination community
+
+--
+
+
+.pull-left[- Before China's policy shock
+ - $C_{ij}(d_{ij}\cdot f_{ij})$ << $P_{ij}(V{jc})$
+ - Political costs prevail
+ ]
+
+ 
+.pull-right[- After China's policy shock
+ - $C_{ij}(d_{ij}))$ >> $P_{ij}(V{jc})$
+ - Marginal political costs deminished
+ ]
+ 
+
+---
+
+
+## Intuition
+
 
 .pull-center[
-![description of the image](graphs/result_ap_2.png)]
-.center[**Gravity Model Estimates at Census Block level**]
+<img src="graphs/mechanism_1.png" width="800" height = "400">
+]
 
+
+- China's GS policy shock shifts the curve flatter (less elastic)
+- Excessive pollution relocation shifted from republican communities to democratic communities
 ---
 
-## Results after the GS Policy
 
+
+
+## California Voting by Precinct
 .pull-center[
-![description of the image](graphs/result_ap_3.png)]
-.center[**Gravity Model Estimates at Census Block level**]
----
-
-## Results prior to the GS Policy with s.d. Clusters
-
-.pull-center[
-![description of the image](graphs/sd_clustered_bp_1.png)]
-.center[**Gravity Model Estimates at Census Block level**]
----
-
-## Results prior to the GS Policy with s.d. Clusters
-
-.pull-center[
-![description of the image](graphs/sd_clustered_bp_2.png)]
-.center[**Gravity Model Estimates at Census Block level**]
----
-
-## Results prior to the GS Policy with s.d. Clusters
-
-.pull-center[
-![description of the image](graphs/sd_clustered_bp_3.png)]
-.center[**Gravity Model Estimates at Census Block level**]
----
-
-## Results prior to the GS Policy with s.d. Clusters
-
-.pull-center[
-![description of the image](graphs/sd_clustered_bp_4.png)]
-.center[**Gravity Model Estimates at Census Block level**]
----
-
-## Results after the GS Policy with s.d. Clusters
-
-.pull-center[
-![description of the image](graphs/sd_clustered_ap_1.png)]
-.center[**Gravity Model Estimates at Census Block level**]
+.center[<img src="graphs/SF_election_flow.png" width="800" height = "490">]]
+.center[**Disposal flow and Voting by precinct in California**]
 
 ---
 
-## Results after the GS Policy with s.d. Clusters
 
-.pull-center[
-![description of the image](graphs/sd_clustered_ap_2.png)]
-.center[**Gravity Model Estimates at Census Block level**]
+
+
+
+
+## Mechanism -- Political Costs
+.pull-left[
+.center[**Before China's GS Policy**]
+<img src="graphs/RD_before.png" width="400" height = "330">
+- Facilities in Republican communities (low political costs) received more waste pollution
+]
+
 
 ---
 
-## Results after the GS Policy with s.d. Clusters
 
-.pull-center[
-![description of the image](graphs/sd_clustered_ap_3.png)]
-.center[**Gravity Model Estimates at Census Block level**]
+
+## Mechanism -- Political Costs
+
+
+.pull-left[
+.center[**Before China's GS Policy**]
+<img src="graphs/RD_before.png" width="400" height = "330">
+- Facilities in Republican communities (low political costs) received more waste pollution
+]
+
+
+
+.pull-right[
+.center[**After China's GS Policy**]
+<img src="graphs/RD_after.png" width="400" height = "330">
+- Facilities from democratic communities (relatively higher political costs) received more waste pollution
+]
+
 ---
 
-## Results after the GS Policy with s.d. Clusters
-
-.pull-center[
-![description of the image](graphs/sd_clustered_ap_4.png)]
-.center[**Gravity Model Estimates at Census Block level**]
----
 
 ## Conclusion Preliminary Findings
 
@@ -675,6 +528,10 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
   - After China's GS policy
   
     Inflows increased more for <span style="color:darkgreen">remote lower income white communities</span>
+    
+   - Potential mechanism 
+   
+   Waste tended to relocate to places that have <span style="color:darkgreen">**lower political costs**</span>. After GS policy shock, pollution relocated more to higher political costs places
    
 ---
 
@@ -690,3 +547,108 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 szhang6@uoregon.edu]
 
 ---
+
+## Placebo Tests
+
+.pull-center[
+<img src="graphs/California_placebo_1.png" width="700" height = "450">
+.center[Fig.6 **Placebo Test using "Fake" Treatment Industries**]
+]
+
+
+---
+
+
+## Placebo Tests
+
+.pull-center[
+<img src="graphs/California_placebo_2.png" width="700" height = "450">
+.center[Fig.6 **Placebo Test using "Fake" Treatment Industries**]
+]
+
+---
+
+## Appendix: Environmental Outcome Measurement
+
+.pull-left[ 
+<img src="graphs/pm25_distance_facilities.png" width="500" height = "200">
+<img src="graphs/methane_emissions_pinpoint.png" width="500" height = "200">
+.center[Fig.4 **PM2.5 from landfill sources by distance upper) and GHGSat’s satellite showed methane from landfills (bottom)**]
+]
+
+
+.pull-right[ 
+- Why use <span style="color:darkgreen"> **methane**</span> emissions?
+
+ - Need consistently measured emissions data from 2010 to 2020
+
+ - They are a **proxy** for general pollution emissions:**organic hazardous air pollutants (HAP), volatile organic compounds (VOC), hydrogen sulfide**, etc. 
+ 
+ - Methane is far more potent at trapping the sun’s heat than carbon emissions
+
+
+]
+
+---
+
+## Appendix: Racial variation
+
+.pull-left[
+<img src="graphs/race_variation_LA.png" width="450" height = "400">
+]
+.pull-right[
+<img src="graphs/race_variation_SC.png" width="450" height = "400">
+]
+.center[Fig.10 **Racial variation within the county**]
+---
+
+
+
+
+## Appendix: Data Source Comparison
+
+
+.pull-left[<img src="graphs/Calrecycle_EPA.png" width="360" height = "400">
+]
+.pull-right[<img src="graphs/Calrecycle_WBJ.png" width="360" height = "400">
+]
+
+
+---
+
+
+## Voting variation
+
+.pull-left[
+<img src="graphs/LA_voting_variation.png" width="450" height = "400">
+]
+.pull-right[
+<img src="graphs/SC_voting_variation.png" width="450" height = "400">
+]
+.center[Fig.15 **Voting variation within the county**]
+---
+
+## Regression Result
+
+**OLS Regression**
+$$log(Y_{ijt}) = \alpha + \beta_{1} P_{j}(Vjc) + \beta_{2} GS_{post} * P_{j}(Vjc) + \beta_{3}log(X_{jt})$$
+$$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
+
+```{r table2, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+tabl <- "
+|                         | Overall            | Republican   | Democrats  |
+|---------------          |:-------------:     |------:       |------:     |
+| Political Cost j        | -0.144             |   -1.2584    |0.59845     |
+|                         |(0.062)             | (0.101)      |(0.439)     |
+| Post * Political Cost j | 0.726              |  1.113408    | -3.32037   |
+|                         |(0.109)             | (0.171)      |(0.605)     |
+|Controls                 | Y                  |  Y           | Y          |
+|County d FE              | Y                  |  Y           | Y          |
+|Year FE                  | Y                  |  Y           | Y          |
+|Quarter FE               | Y                  |  Y           | Y          |
+|Two-way clustered SD     | Y                  |  Y           | Y          |
+"
+cat(tabl) # output the table in a format good for HTML/PDF/docx conversion
+```
+
+

@@ -841,17 +841,50 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 --
 
 .pull-left[
-<img src="graphs/Political_distance_ofc_rd_pre.png" width="400" height = "220">
-.center[**Before China's GS Policy**]]
+<img src="graphs/Chapter_3/political_distance_and_net_increase_one.png" width="400" height = "250">]
+
 
 .pull-right[
-<img src="graphs/Political_distance_ofc_rd_post.png" width="400" height = "200">
-.center[**After China's GS Policy**]]
-.center[Fig 3.14 Log of total tons of disposal received and political distance from the state average]
+<img src="graphs/Chapter_3/political_distance_and_net_increase_plot_one.png" width="400" height = "250">]
+
+.center[Fig 3.14 Log of net increase tons of disposal received and political distance from the state average]
+---
+
+
+## Mechanism -- Political Costs
+.center[Fig 3.15 Correlations of pollution relocation increase and political affiliation]
+.pull-center[
+<img src="graphs/Chapter_3/political_distance_1.png" width="800" height = "330">
+]
+
+.pull-left[
+- Facilities in Republican (Democratic) counties have seen more (less) increase in pollution relocation
+]
+
+
+
+
 ---
 
 
 
+## Mechanism -- Political Costs
+.center[Fig 3.15 Correlations of pollution relocation increase and political affiliation]
+.pull-center[
+<img src="graphs/Chapter_3/political_distance_2.png" width="800" height = "330">
+]
+
+.pull-left[
+- Facilities in Republican (Democratic) counties have seen more (less) increase in pollution relocation
+]
+
+
+
+.pull-right[
+- Facilities in "Swing" counties have seen less increase in pollution relocation
+]
+
+---
 
 ## Conclusion Preliminary Findings
 
