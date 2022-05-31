@@ -71,7 +71,7 @@ In 2015, the U.S. exported **4.5 billion** pounds of scrap plastic for "recyclin
 <br/>
 --
 
-- **Chapter 4** The effect of China's Waste Import Ban on Coastal Cleanups (with Rebecca Taylor)
+- **Chapter 4** The Effect of China's Waste Import Ban on Coastal Cleanups (with Rebecca Taylor)
 <br/>
 <br/>
 --
@@ -198,7 +198,7 @@ $$y_{it} = \alpha + \sum_{d=-D, d\neq-1}^{D} 1(t-e^{i} = d) \beta_{d} + \gamma X
 .center[Fig 2.5 Netweight (million kg) of U.S. Plastic Scrap Export by Receiving countries/regions in Asia]
 ---
 
-## To Asia: U.S. Plastic Scrap Export Unit Pirce
+## To Asia: U.S. Plastic Scrap Export Unit Price
 
 .pull-center[<img src="graphs/Chapter_2/unit_price.png" width="800" height = "450">]
 .center[Fig 2.6 Unit Price ($) of U.S. Plastic Scrap Export by Receiving countries/regions in Asia]
@@ -549,7 +549,7 @@ $$\hat{\tau_{1t}} = Y_{1t} - \hat{Y_{1t}^{N}}$$
 ]
 
 .pull-right[
-- <span style="color:darkgreen"> **&uarr;** </span> **State-level rate of "significant"  environmental violations** &rarr; <span style="color:darkgreen"> **&uarr;** </span> decrease in methane emissions.
+- <span style="color:darkgreen"> **&uarr;** </span> **State-level rate of "significant"  environmental violations** &rarr; <span style="color:darkgreen"> **&darr;** </span> increase in methane emissions.
 ]
 
 
@@ -722,7 +722,7 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
  - CalRecycle data
  - population centroid coordinates of the origin jurisdictions
  - coordinates of destination facilities
- - time variant, spatial variant
+ - time invariant, spatial variant
 
 ]
 
@@ -734,7 +734,7 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 
 - **Median income**
 
- - census block level data
+ - Census Block level data
  - use 2010, time invariant, spatial variant
  
 
@@ -835,7 +835,7 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 - After the exogenous policy shock, marginal transportation costs relatively low 
 - Total Tons of Disposal of <span style="color:darkgreen">the destination facility</span> by political distance from **the state average vote**
  - Political distance = county average vote - state average vote
-- The most democratic and republican counties have the lowest political costs
+- The most republican counties have the lowest political costs
 <br/>
 
 --
@@ -881,7 +881,7 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 
 
 .pull-right[
-- Facilities in "Swing" counties have seen less increase in pollution relocation
+- Facilities in "Swing" counties have seen less increase in pollution relocation because of high political costs
 ]
 
 ---
@@ -906,7 +906,7 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 
   - After China's GS policy
   
-    Inflows increased more for <span style="color:darkgreen">**lower income white communities**</span>
+    Inflows increased more for <span style="color:darkgreen">**white communities**</span>
     
 --
    
@@ -936,7 +936,7 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 
 --
 
-- Waste relocated internationally affects litter on the coast/beach
+- Wastes relocation affects litter on the coast/beach
 
 --
 
@@ -1018,7 +1018,9 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 $$y_{it} = \alpha+ \beta_{1} D_{t}+ \beta_{2} T_{i} + \beta_{3}  D_{t}*T_{i} + \gamma X_{it}  + \theta Z_{i}+\nu T_{t} + \epsilon_{it}$$
  - $y_{it}$ items collected per person
  - $D_{t}$ policy dummy variable
- - $T_{i}$ treated countries 
+ - $T_{i}$ treated countries
+ - $Z_{i}$ country fixed effect
+ - $T_{t}$ year fixed effect
  
  
 <br/>
