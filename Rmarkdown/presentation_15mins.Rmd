@@ -2,7 +2,7 @@
 title: "The Effects of China's Waste Import Ban on Pollution Relocation in the U.S."
 subtitle: "Shan Zhang, University of Oregon"
 author: "AERE Summer Conference"
-date: "2022/6/1"
+date: "2022/6/2"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -21,7 +21,7 @@ output:
 
 --
 
-- For many years, most U.S. recyclables were exported to developing countries
+- For many years, most U.S. recyclables exported to developing countries
 
 --
 
@@ -67,12 +67,12 @@ output:
 
 <img src="graphs/motivation_2.png" width="800" height = "350">
 .center[UN Comtrade Data]
-
+<font size="3">
 - U.S. plastic scrap exports to China dropped by <span style="color:darkgreen"> **99%**</span>
 
 --
 
-- U.S. plastic scrap exports to the ROW <span style="color:darkgreen"> **increased, then  decreased** </span> after China's GS policy
+- U.S. plastic scrap exports to ROW <span style="color:darkgreen"> **increased, then  decreased** </span> after China's GS policy
 ---
 
 ## Research Questions
@@ -93,11 +93,11 @@ output:
 
 - For the state of **California**
 
- - What are the <span style="color:darkgreen">**Distributional Effects**</span> of the GS policy on pollution relocation for local communities at census block levels? 
+ - What are the <span style="color:darkgreen">**Distributional Effects**</span> of the GS policy on pollution relocation for local communities at census-block levels? 
 
 --
 
- - What are <span style="color:darkgreen">**Environmental Justice (EJ)**</span> implications? What's the mechanism behind?
+ - What are <span style="color:darkgreen">**Environmental Justice (EJ)**</span> implications? What's the mechanism?
 
 
 ---
@@ -109,28 +109,28 @@ output:
 <font size="3">**Trade and Environment** 
 *Shapiro (2016), Shapiro (2018), Shapiro (2021)*
 
-&rarr; <span style="color:darkgreen">My innovation: study a trade policy that directly restricts externality export and explore the policy's causal effects on local emissions in the U.S.</span><font size="3">
+&rarr; <span style="color:darkgreen">My innovation: Study a trade policy that directly restricts externality export and explore the policy's causal effects on local emissions in the U.S.</span><font size="3">
 
 --
 
 <font size="3">**Environmental Gentrification and Environmental Justice** 
 *Baden and Coursey (2002), Cameron and McConnaha (2006), Banzhaf and Walsh (2008), Depro et al. (2011), Banzhaf and Walsh (2013), Depro et al. (2015), Banzhaf et al. (2019), Ho (2020), Hernandes and Meng (2020), Shapiro and Walker (2021)*
 
-&rarr; <span style="color:darkgreen">My innovation: examine how an exogenous intl. trade policy affects U.S. EJ problems.</span><font size="3">
+&rarr; <span style="color:darkgreen">My innovation: Examine how an exogenous intl. trade policy affects U.S. EJ problems.</span><font size="3">
 
 --
 
 <font size="3">**The efficiency of curbside recycling programs** 
 *Adaland and Caplan (2006), Bohm et al. (2010), Kinnaman (2014), Kinnaman et al. (2014)* 
 
-&rarr; <span style="color:darkgreen">My innovation: show that in the absence of an overseas market for recyclables, the U.S. recycling system is inefficient even though it has the "efficient" recycling rate.</span><font size="3">
+&rarr; <span style="color:darkgreen">My innovation: Show that in the absence of an overseas market for recyclables, the U.S. recycling system is inefficient even though it has the "efficient" recycling rate.</span><font size="3">
 
 --
 
 <font size="3">**Behavioral Economics of Curbside Recycling** 
 *Kurz et al.(2000), Halvorsen (2010), Ashenmiller (2009), Ashenmiller (2011), Best and Kneip (2019), Berck et al. (2020), Berck et al. (2021)*
 
-&rarr; <span style="color:darkgreen">My innovation: use this exogenous trade policy as a tool to explore the relationship between the recycling programs and local environmental outcomes in the U.S.</span><font size="3">
+&rarr; <span style="color:darkgreen">My innovation: Use this exogenous trade policy as a tool to explore the relationship between the recycling programs and local environmental outcomes in the U.S.</span><font size="3">
 
 
 
@@ -159,8 +159,8 @@ output:
 
 
 - Data generation process:
- - Facilities in waste industry report the **amount of wastes accepted** annually 
- - Methane Emission is calculated through a complicated model embedded in U.S. EPA
+ - Facilities in waste industry report annual **amount of wastes accepted**  
+ - Methane emissions are calculated using a complicated model embedded in U.S. EPA
 
 ---
 
@@ -192,16 +192,16 @@ output:
  
 --
 
-- Take advantage of the fact that other industries which also emit GHG were not affected by China's GS policy
+- Take advantage of the fact that other industries which also emit GHGs were not affected by China's GS policy
 
 --
 
-- Use other industries(all states) as donor pool for synthetic control group
+- Use other industries (all states) as donor pool for synthetic control group
 
 --
 
-- Train the model using pre-policy time **2010-2017**
- - calculate state-industry pair weights to minimize prediction error
+- Train the model using the pre-policy period **2010-2017**
+ - Calculate state-industry pair weights to minimize prediction error
 $$\hat{Y_{1t}^{N}} = \sum_{j=2}^{J+1} w_{j} Y_{1t}$$
 
 
@@ -359,7 +359,7 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 .pull-center[
 .center[<img src="graphs/estimate_bp.png" width="450" height = "490">]
 ]
-.center[**Gravity Model Estimates at Census Block level**]
+.center[**Gravity Model: Key coefficient Estimates at Census-Block level**]
 ---
 
 
@@ -367,7 +367,7 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 
 .pull-center[
 .center[<img src="graphs/estimate_ap.png" width="450" height = "490">]]
-.center[**Gravity Model Estimates at Census Block level**]
+.center[**Gravity Model: Key coefficient Estimates at Census-Block level**]
 
 ---
 
@@ -379,7 +379,7 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 
 - Before China's GS policy
   
-  - Waste tend to relocate to <span style="color:darkgreen">**minority communities**</span>
+  - Waste tends to flow to <span style="color:darkgreen">**minority communities**</span>
 
 --
 
@@ -396,19 +396,19 @@ $$\epsilon_{o} + \theta_{d} + \mu_{od} + \eta_{t} + \lambda_{odt}$$
 
 ## Mechanism -- Political Costs
 
-- Racial composition of the destination community is highly correlated with political votes
+- Racial composition of the destination community is highly correlated with voting patterns
 
 .center[<img src="graphs/political_race.png" width="400" height = "250">]
 
-.center[**Correlation between White percentage by blocks and Republican votes by precinct**]
+.center[**Correlation between White percentage by census blocks and Republican share by voting precincts**]
 
 --
 
-- Higher Republican votes, higher percentage of White population in the community
+- Higher Republican votes, higher percentage of White population
 
 --
 
-- Does disposal flow increase more in Republican communities due to political costs?
+- Do disposal inflows to Republican communities increase more due to political costs?
 <br/>
 
 
@@ -459,7 +459,7 @@ $$V{jc} = v_{j} - \overline v_{c}$$
 
 
 - China's GS policy shock shifts the curve flatter (less elastic)
-- Excessive pollution relocation shifted from republican communities to democratic communities
+- Excessive pollution relocation shifted from Republican communities to Democratic communities
 ---
 
 
@@ -503,7 +503,7 @@ $$V{jc} = v_{j} - \overline v_{c}$$
 .pull-right[
 .center[**After China's GS Policy**]
 <img src="graphs/RD_after.png" width="400" height = "330">
-- Facilities from democratic communities (relatively higher political costs) received more waste pollution
+- Facilities from Democratic communities (relatively higher political costs) received more waste pollution
 ]
 
 ---
@@ -513,7 +513,7 @@ $$V{jc} = v_{j} - \overline v_{c}$$
 
 - **U.S. State-level Methane Emissions**
 
-  - Many states show <span style="color:darkgreen">statistically significant increases</span> in methane emission
+  - Many states: <span style="color:darkgreen">statistically significant increases</span> in methane emissions
   
   - Relate to <span style="color:darkgreen">historical trade volume</span>, <span style="color:darkgreen">stringency of envir. regulations</span>
 
@@ -543,6 +543,9 @@ $$V{jc} = v_{j} - \overline v_{c}$$
 <br/>
 
 **Questions?**
+
+
+Shan Zhang, Department of Economics, University of Oregon
 
 szhang6@uoregon.edu]
 

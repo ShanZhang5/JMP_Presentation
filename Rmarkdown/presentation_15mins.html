@@ -15,7 +15,7 @@ class: left, bottom, my-title, title-slide
 # The Effects of China’s Waste Import Ban on Pollution Relocation in the U.S.
 ## Shan Zhang, University of Oregon
 ### AERE Summer Conference
-### 2022/6/1
+### 2022/6/2
 
 ---
 
@@ -28,7 +28,7 @@ class: left, bottom, my-title, title-slide
 
 --
 
-- For many years, most U.S. recyclables were exported to developing countries
+- For many years, most U.S. recyclables exported to developing countries
 
 --
 
@@ -74,12 +74,12 @@ class: left, bottom, my-title, title-slide
 
 &lt;img src="graphs/motivation_2.png" width="800" height = "350"&gt;
 .center[UN Comtrade Data]
-
+&lt;font size="3"&gt;
 - U.S. plastic scrap exports to China dropped by &lt;span style="color:darkgreen"&gt; **99%**&lt;/span&gt;
 
 --
 
-- U.S. plastic scrap exports to the ROW &lt;span style="color:darkgreen"&gt; **increased, then  decreased** &lt;/span&gt; after China's GS policy
+- U.S. plastic scrap exports to ROW &lt;span style="color:darkgreen"&gt; **increased, then  decreased** &lt;/span&gt; after China's GS policy
 ---
 
 ## Research Questions
@@ -100,11 +100,11 @@ class: left, bottom, my-title, title-slide
 
 - For the state of **California**
 
- - What are the &lt;span style="color:darkgreen"&gt;**Distributional Effects**&lt;/span&gt; of the GS policy on pollution relocation for local communities at census block levels? 
+ - What are the &lt;span style="color:darkgreen"&gt;**Distributional Effects**&lt;/span&gt; of the GS policy on pollution relocation for local communities at census-block levels? 
 
 --
 
- - What are &lt;span style="color:darkgreen"&gt;**Environmental Justice (EJ)**&lt;/span&gt; implications? What's the mechanism behind?
+ - What are &lt;span style="color:darkgreen"&gt;**Environmental Justice (EJ)**&lt;/span&gt; implications? What's the mechanism?
 
 
 ---
@@ -116,28 +116,28 @@ class: left, bottom, my-title, title-slide
 &lt;font size="3"&gt;**Trade and Environment** 
 *Shapiro (2016), Shapiro (2018), Shapiro (2021)*
 
-&amp;rarr; &lt;span style="color:darkgreen"&gt;My innovation: study a trade policy that directly restricts externality export and explore the policy's causal effects on local emissions in the U.S.&lt;/span&gt;&lt;font size="3"&gt;
+&amp;rarr; &lt;span style="color:darkgreen"&gt;My innovation: Study a trade policy that directly restricts externality export and explore the policy's causal effects on local emissions in the U.S.&lt;/span&gt;&lt;font size="3"&gt;
 
 --
 
 &lt;font size="3"&gt;**Environmental Gentrification and Environmental Justice** 
 *Baden and Coursey (2002), Cameron and McConnaha (2006), Banzhaf and Walsh (2008), Depro et al. (2011), Banzhaf and Walsh (2013), Depro et al. (2015), Banzhaf et al. (2019), Ho (2020), Hernandes and Meng (2020), Shapiro and Walker (2021)*
 
-&amp;rarr; &lt;span style="color:darkgreen"&gt;My innovation: examine how an exogenous intl. trade policy affects U.S. EJ problems.&lt;/span&gt;&lt;font size="3"&gt;
+&amp;rarr; &lt;span style="color:darkgreen"&gt;My innovation: Examine how an exogenous intl. trade policy affects U.S. EJ problems.&lt;/span&gt;&lt;font size="3"&gt;
 
 --
 
 &lt;font size="3"&gt;**The efficiency of curbside recycling programs** 
 *Adaland and Caplan (2006), Bohm et al. (2010), Kinnaman (2014), Kinnaman et al. (2014)* 
 
-&amp;rarr; &lt;span style="color:darkgreen"&gt;My innovation: show that in the absence of an overseas market for recyclables, the U.S. recycling system is inefficient even though it has the "efficient" recycling rate.&lt;/span&gt;&lt;font size="3"&gt;
+&amp;rarr; &lt;span style="color:darkgreen"&gt;My innovation: Show that in the absence of an overseas market for recyclables, the U.S. recycling system is inefficient even though it has the "efficient" recycling rate.&lt;/span&gt;&lt;font size="3"&gt;
 
 --
 
 &lt;font size="3"&gt;**Behavioral Economics of Curbside Recycling** 
 *Kurz et al.(2000), Halvorsen (2010), Ashenmiller (2009), Ashenmiller (2011), Best and Kneip (2019), Berck et al. (2020), Berck et al. (2021)*
 
-&amp;rarr; &lt;span style="color:darkgreen"&gt;My innovation: use this exogenous trade policy as a tool to explore the relationship between the recycling programs and local environmental outcomes in the U.S.&lt;/span&gt;&lt;font size="3"&gt;
+&amp;rarr; &lt;span style="color:darkgreen"&gt;My innovation: Use this exogenous trade policy as a tool to explore the relationship between the recycling programs and local environmental outcomes in the U.S.&lt;/span&gt;&lt;font size="3"&gt;
 
 
 
@@ -166,8 +166,8 @@ class: left, bottom, my-title, title-slide
 
 
 - Data generation process:
- - Facilities in waste industry report the **amount of wastes accepted** annually 
- - Methane Emission is calculated through a complicated model embedded in U.S. EPA
+ - Facilities in waste industry report annual **amount of wastes accepted**  
+ - Methane emissions are calculated using a complicated model embedded in U.S. EPA
 
 ---
 
@@ -199,16 +199,16 @@ class: left, bottom, my-title, title-slide
  
 --
 
-- Take advantage of the fact that other industries which also emit GHG were not affected by China's GS policy
+- Take advantage of the fact that other industries which also emit GHGs were not affected by China's GS policy
 
 --
 
-- Use other industries(all states) as donor pool for synthetic control group
+- Use other industries (all states) as donor pool for synthetic control group
 
 --
 
-- Train the model using pre-policy time **2010-2017**
- - calculate state-industry pair weights to minimize prediction error
+- Train the model using the pre-policy period **2010-2017**
+ - Calculate state-industry pair weights to minimize prediction error
 `$$\hat{Y_{1t}^{N}} = \sum_{j=2}^{J+1} w_{j} Y_{1t}$$`
 
 
@@ -366,7 +366,7 @@ class: left, bottom, my-title, title-slide
 .pull-center[
 .center[&lt;img src="graphs/estimate_bp.png" width="450" height = "490"&gt;]
 ]
-.center[**Gravity Model Estimates at Census Block level**]
+.center[**Gravity Model: Key coefficient Estimates at Census-Block level**]
 ---
 
 
@@ -374,7 +374,7 @@ class: left, bottom, my-title, title-slide
 
 .pull-center[
 .center[&lt;img src="graphs/estimate_ap.png" width="450" height = "490"&gt;]]
-.center[**Gravity Model Estimates at Census Block level**]
+.center[**Gravity Model: Key coefficient Estimates at Census-Block level**]
 
 ---
 
@@ -386,7 +386,7 @@ class: left, bottom, my-title, title-slide
 
 - Before China's GS policy
   
-  - Waste tend to relocate to &lt;span style="color:darkgreen"&gt;**minority communities**&lt;/span&gt;
+  - Waste tends to flow to &lt;span style="color:darkgreen"&gt;**minority communities**&lt;/span&gt;
 
 --
 
@@ -403,19 +403,19 @@ class: left, bottom, my-title, title-slide
 
 ## Mechanism -- Political Costs
 
-- Racial composition of the destination community is highly correlated with political votes
+- Racial composition of the destination community is highly correlated with voting patterns
 
 .center[&lt;img src="graphs/political_race.png" width="400" height = "250"&gt;]
 
-.center[**Correlation between White percentage by blocks and Republican votes by precinct**]
+.center[**Correlation between White percentage by census blocks and Republican share by voting precincts**]
 
 --
 
-- Higher Republican votes, higher percentage of White population in the community
+- Higher Republican votes, higher percentage of White population
 
 --
 
-- Does disposal flow increase more in Republican communities due to political costs?
+- Do disposal inflows to Republican communities increase more due to political costs?
 &lt;br/&gt;
 
 
@@ -466,7 +466,7 @@ class: left, bottom, my-title, title-slide
 
 
 - China's GS policy shock shifts the curve flatter (less elastic)
-- Excessive pollution relocation shifted from republican communities to democratic communities
+- Excessive pollution relocation shifted from Republican communities to Democratic communities
 ---
 
 
@@ -510,7 +510,7 @@ class: left, bottom, my-title, title-slide
 .pull-right[
 .center[**After China's GS Policy**]
 &lt;img src="graphs/RD_after.png" width="400" height = "330"&gt;
-- Facilities from democratic communities (relatively higher political costs) received more waste pollution
+- Facilities from Democratic communities (relatively higher political costs) received more waste pollution
 ]
 
 ---
@@ -520,7 +520,7 @@ class: left, bottom, my-title, title-slide
 
 - **U.S. State-level Methane Emissions**
 
-  - Many states show &lt;span style="color:darkgreen"&gt;statistically significant increases&lt;/span&gt; in methane emission
+  - Many states: &lt;span style="color:darkgreen"&gt;statistically significant increases&lt;/span&gt; in methane emissions
   
   - Relate to &lt;span style="color:darkgreen"&gt;historical trade volume&lt;/span&gt;, &lt;span style="color:darkgreen"&gt;stringency of envir. regulations&lt;/span&gt;
 
@@ -550,6 +550,9 @@ class: left, bottom, my-title, title-slide
 &lt;br/&gt;
 
 **Questions?**
+
+
+Shan Zhang, Department of Economics, University of Oregon
 
 szhang6@uoregon.edu]
 
