@@ -1,8 +1,8 @@
 ---
 title: "The Effects of China's Waste Import Ban on Pollution Relocation in the U.S."
 subtitle: "Shan Zhang, University of Oregon"
-author: "AERE Summer Conference"
-date: "2022/6/2"
+author: "WEAI@AERE Conference"
+date: "2022/7/1"
 output:
   xaringan::moon_reader:
     lib_dir: libs
