@@ -1,0 +1,161 @@
+---
+title: "Bikesharing, Metro Stations, and House Prices: Evidence from Washington’s Capital Bikeshare System"
+subtitle: "Xinxin Cao, George Washington University"
+author: "Discussant:Shan Zhang, University of Oregon"
+date: "2022/6/30"
+output: 
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      titleSlideClass: ["left", "bottom", "my-title"]
+      css: [default, metropolis, metropolis-fonts]
+      highlightStyle: github
+      countIncrementalSlides: false
+resource_files:
+  - graphs
+---
+
+## Research Question:
+
+**What's the overall effect of bike-sharing systems on residential property prices and metro station house price gradient?**
+ - Is proximity to metro stations associated with higher house prices?
+ - How does the introduction of bike sharing stations near a residential property affect house prices differently at different distances to the closest metro station?
+ - Do bikeshare systems affect metro station house price gradient, and in which direction?
+ 
+--
+ 
+<span style="color:darkgreen">What's the difference between the second and the third question? Define more clearly what's "metro station house price gradient"?</span> 
+
+
+---
+
+## Research Question:
+
+It is an interesting question to think about the effect of the interactions of bike-sharing systems and metro stations on property prices
+
+--
+
+It makes me naturally wonder about the mechanisms: through what channels do bike-sharing systems affect the housing prices around metro stations?
+ - More options to commute?
+ - Easier to travel to the metro station compared to walking?
+ - Using bikes as exercise amenities?
+ 
+---
+
+## Data
+
+ - Zillow’s Transaction and Assessment Database (ZTRAX). 
+  - Single-family houses, townhouses, and condominiums 
+  - The analysis only includes single-family houses. It could be very interesting to have different types of houses/homes in the analysis to cover residents' heterogeneous preferences
+  
+--
+
+ - Bike Sharing Stations and Metro Stations Data
+  - Most bike sharing stations are close to metro stations
+  - bike-sharing docks are not distributed randomly
+  - locations of metro stations and bike sharing docks are highly correlated
+
+  
+---
+
+
+## Empirical Strategy
+
+- Identification threat:
+
+The impact of docked bike sharing systems on house prices and metro station house price gradient is endogeneous to bikesharing station locations and opening dates.
+
+--
+
+- DID with Two-Way Fixed Effects
+
+ - locations and opening dates of bike sharing stations are random, conditioned on the controls variables: neighborhood characteristics, property distance to park, distance to retail location, property distance to metro station, as well as time and census-tract fixed effects.
+ 
+--
+ 
+ - Be more explicit about how these control variables and fixed effects solve for different endogeneity scenarios.
+ 
+--
+ 
+ - Are control variables and fixed effects enough to solve the endogeneity problem? <span style="color:darkgreen">Who</span>  makes the decision of siting the bikesharing docks? <span style="color:darkgreen">What's the decision process</span>  of siting the bikesharing dock? <span style="color:darkgreen">What are the factors that affect the bikesharing dock siting</span> ? Is there any internal connection between metro station and bikesharing companies?
+
+ 
+ 
+ 
+---
+
+## Empirical Strategy
+
+- <span style="color:darkgreen"> TWFE Diff-in-diff: Callaway and Sant’Anna (2021), Sun and Abraham (2021), Borusyak et al. (2021)</span>
+ - Use to check robustness?
+
+--
+ 
+- The treatment event is defined as the opening of a bike share station within 0.3 miles of a property
+ - Can you do a couple other distances for robustness check? See treatment to be 0.4,.0.5, 0.2 miles within a property? 
+ - <span style="color:darkgreen">Maybe spatial lag models? Make distance bands?</span>
+ 
+--
+ 
+- Event study to check parallel trends assumption
+ - Great
+
+ 
+---
+
+## Results
+
+**Single-family house prices fall as the distance to the closest metro station increases.**
+
+ - Very intuitive
+
+--
+
+**For single-family houses within 0.5 miles of the closest metro station, the opening of bike sharing stations within 0.3 miles increases property price by a statistically significant 5% on average.**
+
+ - <span style="color:darkgreen">Big increase! Mechanism?</span>
+
+--
+
+ - It would be interesting to look at how townhouses and condominiums are affected; how about rental market?
+
+--
+
+ - It would also be interesting to see the heterogeneous effects of bike sharing stations on housing price by neighborhood income-levels and racial compositions.
+
+--
+ 
+**The results show no evidence of change in metro station single-family house price gradient induced by the introduction of bikeshare stations.**
+ - I am little confused with the term "metro station house price gradient". 
+ - How to distinguish this result from the second result? 
+ 
+---
+
+
+## Conclusion
+
+.pull-center[
+
+<br/>
+<br/>
+
+
+**Great Job!**
+
+
+<br/>
+<br/>
+
+
+Contact:
+
+Shan Zhang
+
+szhang6@uoregon.edu
+
+]
+
+
+
+
+

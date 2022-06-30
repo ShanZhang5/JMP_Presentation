@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Bikesharing, Metro Stations, and House Prices: Evidence from Washington’s Capital Bikeshare System</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Discussant:Shan Zhang, University of Oregon" />
+    <script src="libs/header-attrs-2.11/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: left, bottom, my-title, title-slide
+
+# Bikesharing, Metro Stations, and House Prices: Evidence from Washington’s Capital Bikeshare System
+## Xinxin Cao, George Washington University
+### Discussant:Shan Zhang, University of Oregon
+### 2022/6/30
+
+---
+
+
+## Research Question:
+
+**What's the overall effect of bike-sharing systems on residential property prices and metro station house price gradient?**
+ - Is proximity to metro stations associated with higher house prices?
+ - How does the introduction of bike sharing stations near a residential property affect house prices differently at different distances to the closest metro station?
+ - Do bikeshare systems affect metro station house price gradient, and in which direction?
+ 
+--
+ 
+&lt;span style="color:darkgreen"&gt;What's the difference between the second and the third question? Define more clearly what's "metro station house price gradient"?&lt;/span&gt; 
+
+
+---
+
+## Research Question:
+
+It is an interesting question to think about the effect of the interactions of bike-sharing systems and metro stations on property prices
+
+--
+
+It makes me naturally wonder about the mechanisms: through what channels do bike-sharing systems affect the housing prices around metro stations?
+ - More options to commute?
+ - Easier to travel to the metro station compared to walking?
+ - Using bikes as exercise amenities?
+ 
+---
+
+## Data
+
+ - Zillow’s Transaction and Assessment Database (ZTRAX). 
+  - Single-family houses, townhouses, and condominiums 
+  - The analysis only includes single-family houses. It could be very interesting to have different types of houses/homes in the analysis to cover residents' heterogeneous preferences
+  
+--
+
+ - Bike Sharing Stations and Metro Stations Data
+  - Most bike sharing stations are close to metro stations
+  - bike-sharing docks are not distributed randomly
+  - locations of metro stations and bike sharing docks are highly correlated
+
+  
+---
+
+
+## Empirical Strategy
+
+- Identification threat:
+
+The impact of docked bike sharing systems on house prices and metro station house price gradient is endogeneous to bikesharing station locations and opening dates.
+
+--
+
+- DID with Two-Way Fixed Effects
+
+ - locations and opening dates of bike sharing stations are random, conditioned on the controls variables: neighborhood characteristics, property distance to park, distance to retail location, property distance to metro station, as well as time and census-tract fixed effects.
+ 
+--
+ 
+ - Be more explicit about how these control variables and fixed effects solve for different endogeneity scenarios.
+ 
+--
+ 
+ - Are control variables and fixed effects enough to solve the endogeneity problem? &lt;span style="color:darkgreen"&gt;Who&lt;/span&gt;  makes the decision of siting the bikesharing docks? &lt;span style="color:darkgreen"&gt;What's the decision process&lt;/span&gt;  of siting the bikesharing dock? &lt;span style="color:darkgreen"&gt;What are the factors that affect the bikesharing dock siting&lt;/span&gt; ? Is there any internal connection between metro station and bikesharing companies?
+
+ 
+ 
+ 
+---
+
+## Empirical Strategy
+
+- &lt;span style="color:darkgreen"&gt; TWFE Diff-in-diff: Callaway and Sant’Anna (2021), Sun and Abraham (2021), Borusyak et al. (2021)&lt;/span&gt;
+ - Use to check robustness?
+
+--
+ 
+- The treatment event is defined as the opening of a bike share station within 0.3 miles of a property
+ - Can you do a couple other distances for robustness check? See treatment to be 0.4,.0.5, 0.2 miles within a property? 
+ - &lt;span style="color:darkgreen"&gt;Maybe spatial lag models? Make distance bands?&lt;/span&gt;
+ 
+--
+ 
+- Event study to check parallel trends assumption
+ - Great
+
+ 
+---
+
+## Results
+
+**Single-family house prices fall as the distance to the closest metro station increases.**
+
+ - Very intuitive
+
+--
+
+**For single-family houses within 0.5 miles of the closest metro station, the opening of bike sharing stations within 0.3 miles increases property price by a statistically significant 5% on average.**
+
+ - &lt;span style="color:darkgreen"&gt;Big increase! Mechanism?&lt;/span&gt;
+
+--
+
+ - It would be interesting to look at how townhouses and condominiums are affected; how about rental market?
+
+--
+
+ - It would also be interesting to see the heterogeneous effects of bike sharing stations on housing price by neighborhood income-levels and racial compositions.
+
+--
+ 
+**The results show no evidence of change in metro station single-family house price gradient induced by the introduction of bikeshare stations.**
+ - I am little confused with the term "metro station house price gradient". 
+ - How to distinguish this result from the second result? 
+ 
+---
+
+
+## Conclusion
+
+.pull-center[
+
+&lt;br/&gt;
+&lt;br/&gt;
+
+
+**Great Job!**
+
+
+&lt;br/&gt;
+&lt;br/&gt;
+
+
+Contact:
+
+Shan Zhang
+
+szhang6@uoregon.edu
+
+]
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"css": ["default", "metropolis", "metropolis-fonts"],
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
